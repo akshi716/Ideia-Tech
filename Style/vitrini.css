@@ -80,7 +80,9 @@ nav ul li:nth-child(2) a::after {
 
     border-radius: 10px;
 
-    background: var(--cor-branca);
+    background: #2c87b1;
+    color: #03141e;
+    border-color: #287ba2;
 
     display: flex;
     flex-direction: column;
@@ -88,15 +90,18 @@ nav ul li:nth-child(2) a::after {
 
     gap: 24px;
 
-    transition: 0.3s;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
-.card-produto:hover {
-    transform: translateY(-5px);
+.card-produto:focus-within {
+    border-color: #16445a;
+    box-shadow: 0 0 0 2px rgba(22, 68, 90, .22), 0 8px 20px rgba(6, 25, 34, .12);
+}
 
-    box-shadow:
-        0 15px 40px
-        rgba(0, 30, 35, 0.08);
+@media (hover: hover) and (pointer: fine) {
+    .card-produto:hover {
+        box-shadow: 0 8px 20px rgba(6, 25, 34, .12);
+    }
 }
 
 .card-produto .icone-card {
@@ -275,4 +280,39 @@ nav ul li:nth-child(2) a::after {
     object-fit: cover;
 
     display: block;
+}/* Fotos originais: produto inteiro, sem recorte ou distorção. */
+.card-produto { padding: 14px; gap: 20px; border-radius: 8px; }
+.produto-foto { width: 100%; aspect-ratio: 1; background: var(--cor-fundo); border-radius: 5px; overflow: hidden; display: grid; place-items: center; }
+.produto-foto img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+.produto-sem-foto { align-content: center; gap: 12px; color: #03141e; font-size: 13px; }
+.produto-sem-foto svg { width: 48px; height: 48px; }
+.produto-info, .produto-rodape { padding: 0 6px; }
+.produto-info { flex: 1; }
+.produto-info p { color: #03141e; font-size: 14px; line-height: 1.65; }
+.produto-info .card-etiqueta { color: #03141e; font-size: 10px; letter-spacing: .7px; margin-bottom: 8px; }
+.produto-dados { flex-wrap: wrap; gap: 6px 12px; }
+.produto-estoque { color: #03141e; font-size: 12px; }
+.produto-estoque.estoque-baixo { color: #03141e; text-decoration: underline; text-underline-offset: 3px; }
+.card-produto :focus-visible { outline-color: #03141e; }
+.botao-carrinho { min-height: 44px; height: auto; padding: 10px 8px; font-size: 12px; }
+.botao-orcamento { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 20px; background: var(--cor-primaria); color: #002d29; border-radius: 5px; font-weight: 600; white-space: nowrap; }
+.chamada-texto h2 { line-height: 1.2; }
+.chamada-texto p { color: #b7c6cb; font-size: 15px; }
+@media (max-width: 1050px) { .grade-produtos { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media (max-width: 800px) {
+    .vitrine { margin-top: 40px; }
+    .grade-produtos { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .vitrine-topo { gap: 24px; }
+    .imagemPrincipal { width: 200px; height: 190px; object-fit: contain; }
+    .chamada-orcamento { padding: 28px; flex-direction: column; align-items: flex-start; gap: 20px; }
 }
+@media (max-width: 520px) {
+    .vitrine-topo { display: block; }
+    .vitrine-topo > div:last-child { display: none; }
+    .grade-produtos { grid-template-columns: 1fr; gap: 24px; }
+    .produto-foto { max-height: 380px; }
+    .produto-info h3 { font-size: 20px; }
+    .botao-carrinho { font-size: 14px; }
+    .secao-produtos { margin-bottom: 40px; }
+}
+.vitrine .cabecalho-secao h1 { font-family: "Manrope", sans-serif; font-size: clamp(34px,4vw,48px); line-height: 1.15; letter-spacing: -1.5px; margin-bottom: 16px; }

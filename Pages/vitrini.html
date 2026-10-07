@@ -7,7 +7,7 @@
     <title>Vitrine | Ideia Tech</title>
      <link rel="stylesheet" href="../Style/Style.css">
     <link rel="stylesheet" href="../Style/vitrini.css">
-   
+
     <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
 </head>
 
@@ -17,7 +17,7 @@
         <nav>
             <ul>
                 <li><a href="../Pages/index.html">Início</a></li>
-                <li><a href="../Pages/vitrini.html">Vitrini</a></li>
+                <li><a href="../Pages/vitrini.html" aria-current="page">Vitrine</a></li>
                 <li><a href="../Pages/Servicos.html">Serviços</a></li>
                 <li><a href="../Pages/">Orçamento</a></li>
                 <li><a href="../Pages">Acompanhar</a></li>
@@ -26,7 +26,7 @@
 
             <!-- Mudança de tema -->
 
-            <a><i data-lucide="user"></i>Perfil</a>
+            <a href="../Pages/Perfil.html"><i data-lucide="user"></i>Perfil</a>
         </nav>
     </header>
 
@@ -46,8 +46,7 @@
                     </h2>
 
                     <p>
-                        Tudo para proteger seu aparelho no dia a dia ou
-                        devolver ele à vida depois de um problema.
+                        Carregadores, capas e peças de reposição para o seu celular. Confira as opções abaixo.
                     </p>
                 </div>
 
@@ -66,9 +65,7 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="plug-zap"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Carregador.png" alt="Carregador com entrada USB-C" width="497" height="494" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">ACESSÓRIO</span>
@@ -95,16 +92,14 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="shield"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Pelicula.png" alt="Película de proteção para a tela" width="416" height="498" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">ACESSÓRIO</span>
 
                             <h3>Película 3D de vidro</h3>
 
-                            <p>Proteção contra riscos e quedas, com bordas cobertas e instalação fácil.</p>
+                            <p>Vidro de proteção para a tela. Confira o modelo e o tamanho antes de escolher.</p>
                         </div>
 
                         <div class="produto-rodape">
@@ -124,9 +119,7 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="smartphone"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Capinha.png" alt="Capinha de proteção" width="416" height="470" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">ACESSÓRIO</span>
@@ -153,9 +146,7 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="cable"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Cabo_reforçado.png" alt="Cabo reforçado" width="416" height="470" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">ACESSÓRIO</span>
@@ -192,9 +183,7 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="camera"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Camera_traseira.png" alt="Módulo de câmera traseira" width="410" height="464" loading="lazy" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">PEÇA</span>
@@ -221,9 +210,7 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="power"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Botão_power.png" alt="Componente dos botões laterais" width="410" height="464" loading="lazy" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">PEÇA</span>
@@ -251,16 +238,14 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="smartphone"></i>
-                        </div>
+                        <div class="produto-foto"><img src="../Assets/Tampa_Traseira.png" alt="Tampa traseira de reposição" width="410" height="464" loading="lazy" decoding="async"></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">PEÇA</span>
 
                             <h3>Tampa traseira</h3>
 
-                            <p>Vidro ou carcaça de reposição, com acabamento igual ao original do aparelho.</p>
+                            <p>Reposição para a tampa quebrada ou danificada. Confira o modelo e a cor.</p>
                         </div>
 
                         <div class="produto-rodape">
@@ -280,16 +265,14 @@
 
                     <article class="card-produto">
 
-                        <div class="icone-card">
-                            <i data-lucide="cpu"></i>
-                        </div>
+                        <div class="produto-foto produto-sem-foto"><i data-lucide="cpu" aria-hidden="true"></i><span>Foto em breve</span></div>
 
                         <div class="produto-info">
                             <span class="card-etiqueta">PEÇA</span>
 
                             <h3>Placa mãe</h3>
 
-                            <p>Placa lógica testada e com garantia. Consulte a compatibilidade do seu modelo.</p>
+                            <p>Placa de reposição. A escolha depende do modelo e do diagnóstico do aparelho.</p>
                         </div>
 
                         <div class="produto-rodape">
@@ -317,26 +300,21 @@
 
             <div class="chamada-texto">
                 <h2>
-                    Não sabe qual comprar ainda?
+                    Qual é o modelo do seu celular?
                 </h2>
 
                 <p>
-                    Faça um orçamento rápido e veja o melhor aparelho
-                    para o seu uso.
+                    Capas, películas e peças mudam de um modelo para outro. Confira a compatibilidade antes de comprar.
                 </p>
             </div>
 
-            <button>
-                <a href="../Pages/Servicos.html">Fazer orçamento rápido<i data-lucide="ArrowUpRight"></i></a>
-            </button>
+            <a class="botao-orcamento" href="../Pages/Servicos.html">Ver serviços<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
 
         </section>
 
     </main>
 
-    <footer>
-
-    </footer>
+    <footer><p>Ideia Tech · Projeto desenvolvido no Senac DF · 2026</p></footer>
 </body>
 
 <script src="../Script/Script.js"></script>
