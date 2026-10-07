@@ -32,7 +32,7 @@ body {
     background: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: "Inter", sans-serif;
-    font-family: "Sora", sans-serif;        
+    font-family: "Sora", sans-serif;
     line-height: 1.5;
 }
 
@@ -91,7 +91,7 @@ nav ul {
 }
 
 nav ul li a,
-nav > a {
+nav>a {
     font-size: 13px;
     font-weight: 600;
 
@@ -124,7 +124,7 @@ nav ul li:first-child a::after {
     background: var(--cor-primaria);
 }
 
-nav > a {
+nav>a {
     display: flex;
     align-items: center;
 
@@ -312,11 +312,8 @@ main {
 
 .diagrama-iphone {
     background: #091b25;
-
     border-radius: 24px;
-
     padding: 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,9 +322,7 @@ main {
 .diagrama-iphone img {
     width: 100%;
     max-width: 550px;
-    height: auto;
-
-    object-fit: contain;
+    height: 520px;
 
     display: block;
 }
@@ -473,8 +468,7 @@ main {
     transform: translateY(-5px);
 
     box-shadow:
-        0 15px 40px
-        rgba(0, 30, 35, 0.08);
+        0 15px 40px rgba(0, 30, 35, 0.08);
 }
 
 .card-destaque {
@@ -574,10 +568,8 @@ main {
 .processo {
     background: var(--cor-fundo-secundario);
 
-    padding: 90px max(
-        calc((100% - var(--largura-site)) / 2),
-        4%
-    );
+    padding: 90px max(calc((100% - var(--largura-site)) / 2),
+            4%);
 
     display: grid;
 
@@ -600,7 +592,7 @@ main {
     margin-bottom: 20px;
 }
 
-.processo-apresentacao > p {
+.processo-apresentacao>p {
     max-width: 430px;
 
     font-size: 13px;
