@@ -1,0 +1,547 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul-escuro: #3B7B9F;
+    --azul: #5090A9;
+    --azul-claro: #73B1B8;
+    --verde: #95C4BD;
+    --verde-claro: #A9D2C1;
+    --fundo: #F5FAF9;
+    --branco: #FFFFFF;
+    --texto: #061922;
+    --texto-secundario: #647277;
+    --borda: #DCEAE8;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    background: var(--fundo);
+    color: var(--texto);
+}
+
+
+/* =====================================================
+   LADO ESQUERDO — SLOGAN
+===================================================== */
+
+.slogan {
+    position: relative;
+
+    width: 52%;
+    min-height: 100vh;
+
+    padding: 60px 7%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(145deg,
+            #eef8f6 0%,
+            #e5f2f1 55%,
+            #dcefed 100%);
+}
+
+
+/* Logo */
+
+.slogan>img:first-child {
+    position: absolute;
+
+    top: 55px;
+    left: 7%;
+
+    width: 150px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Linha decorativa */
+
+.slogan i {
+    width: 55px;
+    height: 3px;
+    
+    margin-bottom: 25px;
+
+
+}
+.icon {
+color: var(--texto);
+
+}
+
+/* Título */
+
+.slogan h1 {
+    max-width: 550px;
+
+    margin-bottom: 25px;
+
+    font-size: clamp(42px, 4vw, 64px);
+    line-height: 1.05;
+    font-weight: 700;
+
+    letter-spacing: -2px;
+
+    color: var(--texto);
+}
+
+
+/* Texto */
+
+.slogan p {
+    max-width: 480px;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: var(--texto-secundario);
+}
+
+
+/* =====================================================
+   DECORAÇÃO SVG
+===================================================== */
+
+.slogan>img:last-child {
+    position: absolute;
+
+    width: 420px;
+    height: auto;
+
+    right: -100px;
+    bottom: -80px;
+
+    opacity: 0.75;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* Mantém o conteúdo acima da decoração */
+
+.slogan h1,
+.slogan p,
+.slogan>i,
+.slogan>img:first-child {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   ÁREA DO LOGIN
+===================================================== */
+
+.login-form {
+    width: 48%;
+    min-height: 100vh;
+
+    padding: 70px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: var(--branco);
+}
+
+
+/* Título */
+
+.login-form h2 {
+    margin-bottom: 35px;
+
+    font-size: 38px;
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    color: var(--texto);
+}
+
+
+/* =====================================================
+   FORMULÁRIO
+===================================================== */
+
+.login-form form {
+    width: 100%;
+    max-width: 440px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Labels */
+
+.login-form label {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: var(--texto);
+}
+
+
+/* Campos */
+
+.login-form input {
+    width: 100%;
+    height: 52px;
+
+    margin-bottom: 22px;
+    padding: 0 16px;
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #FAFCFC;
+
+    font-size: 15px;
+    color: var(--texto);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* Foco */
+
+.login-form input:focus {
+    border-color: var(--azul-claro);
+
+    background: var(--branco);
+
+    box-shadow:
+        0 0 0 4px rgba(115, 177, 184, 0.12);
+}
+
+
+/* =====================================================
+   ESQUECEU A SENHA
+===================================================== */
+
+.login-form form>span {
+    align-self: flex-end;
+
+    margin-top: -8px;
+    margin-bottom: 25px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: var(--azul-escuro);
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.login-form form>span:hover {
+    color: var(--azul);
+}
+
+
+/* =====================================================
+   BOTÃO ENTRAR
+===================================================== */
+
+.login-form button {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: var(--azul-escuro);
+    color: var(--branco);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-form button svg {
+    width: 18px;
+    height: 18px;
+}
+
+.login-form button:hover {
+    background: #326b8b;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(59, 123, 159, 0.18);
+}
+
+.login-form button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   LOGIN SOCIAL
+===================================================== */
+
+.social-login {
+    width: 100%;
+    max-width: 440px;
+
+    margin-top: 30px;
+}
+
+
+/* "Ou continue com" */
+
+.social-login>p {
+    margin-bottom: 18px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--texto-secundario);
+}
+
+
+/* Container dos botões */
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-login>div {
+    width: 100%;
+
+    margin-bottom: 12px;
+}
+
+
+/* Botões Google / Microsoft */
+
+.social-login a {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-login a:hover {
+    background: #F7FBFA;
+
+    border-color: var(--azul-claro);
+
+    transform: translateY(-1px);
+}
+
+
+/* Logos Google/Microsoft */
+
+.social-login a img {
+    width: 19px;
+    height: 19px;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   CADASTRO
+===================================================== */
+
+.login-form>p:last-child {
+    max-width: 440px;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--texto-secundario);
+}
+
+.login-form>p:last-child a {
+    color: var(--azul-escuro);
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.login-form>p:last-child a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .slogan {
+        width: 100%;
+        min-height: 420px;
+
+        padding: 120px 8% 70px;
+    }
+
+    .slogan>img:first-child {
+        top: 35px;
+        left: 8%;
+
+        width: 130px;
+    }
+
+    .slogan h1 {
+        max-width: 650px;
+
+        font-size: 45px;
+    }
+
+    .slogan p {
+        font-size: 16px;
+    }
+
+    .slogan>img:last-child {
+        width: 300px;
+
+        right: -70px;
+        bottom: -80px;
+    }
+
+    .login-form {
+        width: 100%;
+        min-height: auto;
+
+        padding: 60px 8%;
+    }
+
+    .login-form form,
+    .social-login,
+    .login-form>p:last-child {
+        max-width: 600px;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .slogan {
+        min-height: 390px;
+
+        padding: 110px 25px 60px;
+    }
+
+    .slogan>img:first-child {
+        left: 25px;
+        top: 30px;
+
+        width: 115px;
+    }
+
+    .slogan h1 {
+        font-size: 36px;
+
+        letter-spacing: -1.2px;
+    }
+
+    .slogan p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .slogan>img:last-child {
+        width: 230px;
+
+        right: -70px;
+        bottom: -60px;
+    }
+
+    .login-form {
+        padding: 45px 25px 55px;
+    }
+
+    .login-form h2 {
+        font-size: 32px;
+        margin-bottom: 28px;
+    }
+
+    .login-form input {
+        height: 50px;
+    }
+
+    .login-form button {
+        height: 52px;
+    }
+}

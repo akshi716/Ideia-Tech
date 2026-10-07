@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="/Style/login.css">
+    <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
+
+
+</head>
+
+<body>
+
+    <section class="slogan">
+
+        <img src="#logo" alt="Logo">
+        
+        <div class="icon">
+            <i data-lucide="Minus"></i>
+        </div>
+
+
+        <h1> Tecnologia que não te deixa no escuro</h1>
+
+        <p> Acompanhe seus serviços contratados, seus pedidos e faça orçamentos,
+            tudo em tempo real</p>
+
+        <img src="/assets/decoração.svg/decoration2.svg" alt="decoração">
+
+    </section>
+
+    <section class="login-form">
+        <h2>Login</h2>
+        <form action="/login" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <span>Esqueceu sua senha?</span>
+
+            <button type="submit">Entrar <i data-lucide="ArrowRight"></i> </button>
+        </form>
+        <div class="social-login">
+            <p> Ou continue com </p>
+            <div class="login-google">
+                <a href="#"> <img src="/assets/img/google.png" alt="Google Login">Google</a>
+            </div>
+            <div class="login-microsoft">
+                <a href="#"> <img src="/assets/img/microsoft.png" alt="microsoft Login">Microsoft</a>
+            </div>
+        </div>
+        <p>Ainda não possui uma conta? <a href="/register">Cadastre-se</a></p>
+
+    </section>
+
+
+</body>
+
+<script>window.lucide?.createIcons();</script>
+
+</html>
