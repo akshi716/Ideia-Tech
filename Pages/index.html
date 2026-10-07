@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ideia Tech </title>
+    <link rel="stylesheet" href="../Style/Style.css">
 
     <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
 </head>
@@ -14,56 +15,71 @@
     <header>
         <nav>
             <ul>
-                <li><a>Início</a></li>
-                <li><a>Vitrini</a></li>
-                <li><a>Serviços</a></li>
-                <li><a>Orçamento</a></li>
-                <li><a>Acompanhar</a></li>
-                <a><i data-lucide="ShoppingCartPlus"></i></a>
+                <li><a href="../Pages/index.html">Início</a></li>
+                <li><a href="../Pages/vitrini.html">Vitrini</a></li>
+                <li><a href="../Pages/Servicos.html">Serviços</a></li>
+                <li><a href="../Pages/">Orçamento</a></li>
+                <li><a href="../Pages">Acompanhar</a></li>
+                <a href="../Pages/Carrinho.html"><i data-lucide="ShoppingCartPlus"></i></a>
             </ul>
 
             <!-- Mudança de tema -->
 
-            <a><i data-lucide="user"></i>Perfil</a>
+
+            <a href="../Pages/Perfil.html"><i data-lucide="user"></i>Perfil</a>
         </nav>
     </header>
 
     <main>
 
-        <div class="apresentação">
+        <section class="hero">
 
-            <h2>Tecnologia que não te deixa no escuro</h2>
+            <div class="hero-texto">
 
-            <p>Do primeiro orçamento à entrega, você acompanha cada passo feito com o seu aparelho - Qual é seu próximo
-                passo. </p>
-        </div>
+                <div class="apresentação">
 
-        <button>
-            <a href="../Pages/Servicos.html">Fazer orçamento rápido<i data-lucide="ArrowUpRight"></i></a>
-        </button>
+                    <h2>Tecnologia que não te deixa no escuro</h2>
 
-        <button>
-            <a href="../Pages/Servicos.html">Conheça nossos serviços<i data-lucide="ArrowUpRight"></i></a>
-        </button>
+                    <p>Do primeiro orçamento à entrega, você acompanha cada passo feito com o seu aparelho - Qual é seu próximo
+                        passo. </p>
+                </div>
 
-          <div class="avaliacao-clientes">
+                <div class="hero-botoes">
+                    <button>
+                        <a href="../Pages/Servicos.html">Fazer orçamento rápido<i data-lucide="ArrowUpRight"></i></a>
+                    </button>
 
-        <div class="avatares">
-            <div class="avatar avatar-roxo">AM</div>
-            <div class="avatar avatar-laranja">JV</div>
-            <div class="avatar avatar-verde">RC</div>
-            <div class="avatar avatar-extra">+2k</div>
-        </div>
+                    <button>
+                        <a href="../Pages/Servicos.html">Conheça nossos serviços<i data-lucide="ArrowUpRight"></i></a>
+                    </button>
+                </div>
 
-        <div class="nota">
-            <i data-lucide="star"></i>
+                <div class="avaliacao-clientes">
 
-            <strong>4.9/5</strong>
+                    <div class="avatares">
+                        <div class="avatar avatar-roxo">Jn</div>
+                        <div class="avatar avatar-laranja">JV</div>
+                        <div class="avatar avatar-verde">Ba</div>
+                        <div class="avatar avatar-extra">+1,5k</div>
+                    </div>
 
-            <span>por quem já confiou</span>
-        </div>
+                    <div class="nota">
+                        <i data-lucide="star"></i>
 
-    </div>
+                        <strong>4.9/5</strong>
+
+                        <span>por quem já confiou</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="diagrama-iphone">
+                <img src="../Assets/Diagrama Iphone.png" alt="Diagrama de iphone">
+            </div>
+
+        </section>
 
     <section class="resultados">
 
@@ -87,10 +103,10 @@
             <p>Nota média dos clientes</p>
         </div>
 
+
+
+
     </section>
-
-
-    <!-- SEÇÃO: ESCOLHA SEU PRÓXIMO PASSO -->
 
     <section class="proximo-passo">
 
@@ -111,7 +127,7 @@
 
         <div class="cards-acoes">
 
-            <!-- Card orçamento -->
+
 
             <a href="../Pages/Servicos.html" class="card-acao card-destaque">
 
@@ -144,9 +160,8 @@
             </a>
 
 
-            <!-- Card vitrine -->
 
-            <a href="../Pages/Vitrine.html" class="card-acao">
+            <a href="../Pages/vitrini.html" class="card-acao">
 
                 <div class="card-topo">
                     <div class="icone-card">
@@ -218,7 +233,7 @@
     </section>
 
 
-    <!-- SEÇÃO: PROCESSO -->
+
 
     <section class="processo">
 

@@ -1,11 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vitrine | Ideia Tech</title>
+    <link rel="stylesheet" href="../Style/vitrini.css">
+    <link rel="stylesheet" href="../Style/Style.css">
+
+    <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
 </head>
+
 <body>
-    
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../Pages/index.html">Início</a></li>
+                <li><a href="../Pages/vitrini.html">Vitrini</a></li>
+                <li><a href="../Pages/Servicos.html">Serviços</a></li>
+                <li><a href="../Pages/">Orçamento</a></li>
+                <li><a href="../Pages">Acompanhar</a></li>
+                <a href="../Pages/Carrinho.html"><i data-lucide="ShoppingCartPlus"></i></a>
+            </ul>
+
+            <!-- Mudança de tema -->
+
+            <a><i data-lucide="user"></i>Perfil</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="vitrine">
+
+            <div class="cabecalho-secao">
+                <span class="texto-destaque">
+                    VITRINE
+                </span>
+
+                <h2>
+                    Peças e acessórios.
+                </h2>
+
+                <p>
+                    Tudo para proteger seu aparelho no dia a dia ou
+                    devolver ele à vida depois de um problema.
+                </p>
+            </div>
+
+
+            <div class="secao-produtos">
+
+                <h3 class="titulo-categoria">Acessórios</h3>
+
+                <div class="grade-produtos">
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="plug-zap"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">ACESSÓRIO</span>
+
+                            <h3>Carregador turbo 20W</h3>
+
+                            <p>Carga rápida com entrada USB-C. Compatível com iPhone e Android.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 89,90</strong>
+                                <span class="produto-estoque">24 em estoque</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="shield"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">ACESSÓRIO</span>
+
+                            <h3>Película 3D de vidro</h3>
+
+                            <p>Proteção contra riscos e quedas, com bordas cobertas e instalação fácil.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 24,90</strong>
+                                <span class="produto-estoque">60 em estoque</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">ACESSÓRIO</span>
+
+                            <h3>Capinha anti-impacto</h3>
+
+                            <p>Silicone reforçado nos cantos, com borda elevada para a câmera e a tela.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 39,90</strong>
+                                <span class="produto-estoque estoque-baixo">Últimas 5 unidades</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="cable"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">ACESSÓRIO</span>
+
+                            <h3>Cabo USB-C reforçado</h3>
+
+                            <p>Cabo trançado de 1,5 m, resistente a dobras, para carga e dados.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 29,90</strong>
+                                <span class="produto-estoque">38 em estoque</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+            <div class="secao-produtos">
+
+                <h3 class="titulo-categoria">Peças para conserto</h3>
+
+                <div class="grade-produtos">
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="camera"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">PEÇA</span>
+
+                            <h3>Câmera traseira</h3>
+
+                            <p>Módulo de reposição para quando as fotos saem borradas ou a câmera não abre.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 189,00</strong>
+                                <span class="produto-estoque">9 em estoque</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="power"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">PEÇA</span>
+
+                            <h3>Botão power / volume</h3>
+
+                            <p>Flex com os botões laterais, para quando o aparelho não liga ou não responde ao toque.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 59,00</strong>
+                                <span class="produto-estoque">15 em estoque</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">PEÇA</span>
+
+                            <h3>Tampa traseira</h3>
+
+                            <p>Vidro ou carcaça de reposição, com acabamento igual ao original do aparelho.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 119,00</strong>
+                                <span class="produto-estoque estoque-baixo">Últimas 3 unidades</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+
+                    <article class="card-produto">
+
+                        <div class="icone-card">
+                            <i data-lucide="cpu"></i>
+                        </div>
+
+                        <div class="produto-info">
+                            <span class="card-etiqueta">PEÇA</span>
+
+                            <h3>Placa mãe</h3>
+
+                            <p>Placa lógica testada e com garantia. Consulte a compatibilidade do seu modelo.</p>
+                        </div>
+
+                        <div class="produto-rodape">
+                            <div class="produto-dados">
+                                <strong class="produto-preco">R$ 649,00</strong>
+                                <span class="produto-estoque estoque-baixo">Últimas 2 unidades</span>
+                            </div>
+
+                            <button type="button" class="botao-carrinho">
+                                <i data-lucide="shopping-cart"></i>
+                                Adicionar ao carrinho
+                            </button>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="chamada-orcamento">
+
+            <div class="chamada-texto">
+                <h2>
+                    Não sabe qual comprar ainda?
+                </h2>
+
+                <p>
+                    Faça um orçamento rápido e veja o melhor aparelho
+                    para o seu uso.
+                </p>
+            </div>
+
+            <button>
+                <a href="../Pages/Servicos.html">Fazer orçamento rápido<i data-lucide="ArrowUpRight"></i></a>
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
+
+<script src="../Script/Script.js"></script>
+
+<script>window.lucide?.createIcons();</script>
+
 </html>
