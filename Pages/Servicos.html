@@ -1,11 +1,360 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serviços | Ideia Tech</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/servicos.css">
+    <link rel="stylesheet" href="../Style/Style.css">
+    <link rel="stylesheet" href="../Style/Servicos.css">
+ 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
 </head>
+
 <body>
-    
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="vitrine.html">Vitrine</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="orcamento.html">Orçamento</a></li>
+                <li><a href="#">Acompanhar</a></li>
+                <li>
+                    <a href="#">
+                        <i data-lucide="shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="cliente/perfil.html">
+                <i data-lucide="user"></i>
+                Perfil
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="servicos-apresentacao">
+
+            <div class="servicos-introducao">
+                <span class="etiqueta-secao">ASSISTÊNCIA TÉCNICA</span>
+
+                <h1>
+                    Seu celular com problema?
+                    <span>Nós resolvemos.</span>
+                </h1>
+
+                <p>
+                    Manutenção especializada, peças de qualidade e diagnóstico transparente
+                    para deixar seu aparelho funcionando novamente.
+                </p>
+
+                <div class="servicos-acoes">
+                    <a href="orcamento.html" class="botao-principal">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-up-right"></i>
+                    </a>
+
+                    <a href="#lista-servicos" class="botao-secundario">
+                        Ver serviços
+                    </a>
+                </div>
+            </div>
+
+            <div class="servicos-destaque">
+
+                <div class="destaque-icone">
+                    <i data-lucide="smartphone"></i>
+                </div>
+
+                <div>
+                    <span>Diagnóstico</span>
+                    <strong>Rápido e transparente</strong>
+                </div>
+
+                <div class="destaque-status">
+                    <span></span>
+                    Atendimento disponível
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="secao-servicos" id="lista-servicos">
+
+            <div class="cabecalho-secao">
+                <span class="etiqueta-secao">NOSSOS SERVIÇOS</span>
+                <h2>O que podemos reparar?</h2>
+                <p>
+                    Trabalhamos com os principais reparos em smartphones,
+                    desde serviços rápidos até manutenção interna.
+                </p>
+            </div>
+
+            <div class="grade-servicos">
+
+                <article class="card-servico">
+                    <div class="icone-servico">
+                        <i data-lucide="scan-line"></i>
+                    </div>
+
+                    <div class="servico-conteudo">
+                        <span class="servico-numero">01</span>
+                        <h3>Troca de tela</h3>
+                        <p>
+                            Substituição de displays quebrados, trincados,
+                            com falhas no touch ou problemas de imagem.
+                        </p>
+                    </div>
+
+                    <a href="orcamento.html">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="card-servico">
+                    <div class="icone-servico">
+                        <i data-lucide="battery-charging"></i>
+                    </div>
+
+                    <div class="servico-conteudo">
+                        <span class="servico-numero">02</span>
+                        <h3>Troca de bateria</h3>
+                        <p>
+                            Baterias com baixa autonomia, desligamentos inesperados
+                            ou problemas no carregamento.
+                        </p>
+                    </div>
+
+                    <a href="orcamento.html">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="card-servico">
+                    <div class="icone-servico">
+                        <i data-lucide="plug-zap"></i>
+                    </div>
+
+                    <div class="servico-conteudo">
+                        <span class="servico-numero">03</span>
+                        <h3>Conector de carga</h3>
+                        <p>
+                            Reparo ou substituição do conector quando
+                            o aparelho não reconhece ou não mantém o carregamento.
+                        </p>
+                    </div>
+
+                    <a href="orcamento.html">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="card-servico">
+                    <div class="icone-servico">
+                        <i data-lucide="camera"></i>
+                    </div>
+
+                    <div class="servico-conteudo">
+                        <span class="servico-numero">04</span>
+                        <h3>Reparo de câmera</h3>
+                        <p>
+                            Correção de câmera sem foco, tremendo,
+                            com manchas ou que parou de funcionar.
+                        </p>
+                    </div>
+
+                    <a href="orcamento.html">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="card-servico">
+                    <div class="icone-servico">
+                        <i data-lucide="volume-2"></i>
+                    </div>
+
+                    <div class="servico-conteudo">
+                        <span class="servico-numero">05</span>
+                        <h3>Áudio e microfone</h3>
+                        <p>
+                            Reparo de alto-falantes, microfones,
+                            áudio baixo, chiados e falhas em chamadas.
+                        </p>
+                    </div>
+
+                    <a href="orcamento.html">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+
+                <article class="card-servico">
+                    <div class="icone-servico">
+                        <i data-lucide="cpu"></i>
+                    </div>
+
+                    <div class="servico-conteudo">
+                        <span class="servico-numero">06</span>
+                        <h3>Reparo de placa</h3>
+                        <p>
+                            Diagnóstico técnico e manutenção de placa
+                            para aparelhos que apresentam falhas mais complexas.
+                        </p>
+                    </div>
+
+                    <a href="orcamento.html">
+                        Solicitar orçamento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="processo-servico">
+
+            <div class="cabecalho-processo">
+                <span class="etiqueta-secao">COMO FUNCIONA</span>
+                <h2>Do problema ao aparelho funcionando.</h2>
+            </div>
+
+            <div class="etapas-servico">
+
+                <article>
+                    <span>01</span>
+                    <i data-lucide="clipboard-list"></i>
+                    <h3>Conte o problema</h3>
+                    <p>
+                        Informe o modelo do aparelho e descreva
+                        o problema que está acontecendo.
+                    </p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <i data-lucide="search"></i>
+                    <h3>Diagnóstico</h3>
+                    <p>
+                        Nossa equipe avalia o aparelho e identifica
+                        a origem real da falha.
+                    </p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <i data-lucide="file-check"></i>
+                    <h3>Orçamento</h3>
+                    <p>
+                        Você recebe o valor e as informações
+                        do serviço antes de qualquer reparo.
+                    </p>
+                </article>
+
+                <article>
+                    <span>04</span>
+                    <i data-lucide="badge-check"></i>
+                    <h3>Reparo concluído</h3>
+                    <p>
+                        Após a aprovação, realizamos o serviço
+                        e deixamos o aparelho pronto para você.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="diferenciais">
+
+            <div class="diferenciais-texto">
+                <span class="etiqueta-secao">POR QUE A IDEIA TECH?</span>
+                <h2>Assistência sem mistério.</h2>
+
+                <p>
+                    Você sabe o que está sendo reparado, quanto vai custar
+                    e acompanha o processo do início ao fim.
+                </p>
+            </div>
+
+            <div class="lista-diferenciais">
+
+                <div>
+                    <i data-lucide="shield-check"></i>
+
+                    <span>
+                        <strong>Garantia</strong>
+                        Garantia nos serviços realizados.
+                    </span>
+                </div>
+
+                <div>
+                    <i data-lucide="package-check"></i>
+
+                    <span>
+                        <strong>Peças selecionadas</strong>
+                        Componentes testados antes da instalação.
+                    </span>
+                </div>
+
+                <div>
+                    <i data-lucide="eye"></i>
+
+                    <span>
+                        <strong>Transparência</strong>
+                        Nenhum serviço é realizado sem sua aprovação.
+                    </span>
+                </div>
+
+                <div>
+                    <i data-lucide="clock-3"></i>
+
+                    <span>
+                        <strong>Agilidade</strong>
+                        Processo pensado para reduzir seu tempo sem o aparelho.
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="chamada-servico">
+
+            <div>
+                <span>PRECISA DE REPARO?</span>
+                <h2>Descubra o que está acontecendo com seu aparelho.</h2>
+                <p>
+                    Envie as informações do seu celular e receba
+                    uma avaliação inicial da nossa equipe.
+                </p>
+            </div>
+
+            <a href="orcamento.html">
+                Solicitar orçamento
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </section>
+
+    </main>
+
 </body>
+
 </html>

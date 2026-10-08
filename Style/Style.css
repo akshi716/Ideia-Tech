@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap');
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
-
 
 :root {
     --cor-fundo: #f4f7f7;
@@ -57,14 +53,10 @@ svg {
 header {
     width: 100%;
     height: 74px;
-
     border-bottom: 1px solid var(--cor-borda);
-
     display: flex;
     align-items: center;
-
     background: rgba(244, 247, 247, 0.95);
-
     position: sticky;
     top: 0;
     z-index: 100;
@@ -73,9 +65,7 @@ header {
 nav {
     width: min(var(--largura-site), 92%);
     height: 100%;
-
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,9 +74,7 @@ nav {
 nav ul {
     display: flex;
     align-items: center;
-
     gap: 32px;
-
     list-style: none;
 }
 
@@ -94,9 +82,7 @@ nav ul li a,
 nav>a {
     font-size: 13px;
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.2s;
 }
 
@@ -106,21 +92,16 @@ nav ul li a:hover {
 
 nav ul li:first-child a {
     color: var(--cor-primaria-escura);
-
     position: relative;
 }
 
 nav ul li:first-child a::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: -27px;
-
     width: 100%;
     height: 2px;
-
     background: var(--cor-primaria);
 }
 
