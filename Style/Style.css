@@ -311,7 +311,7 @@ main {
 }
 
 .diagrama-iphone {
-    background: #2c87b1;
+    background: #9cd4ee;
     border-radius: 24px;
     padding: 40px;
     display: flex;
@@ -323,7 +323,6 @@ main {
     width: 100%;
     max-width: 550px;
     height: 520px;
-
     display: block;
 }
 
