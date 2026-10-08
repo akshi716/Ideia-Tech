@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Escolha seu cadastro | IdeiaTech</title>
+
+    <script 
+        src="https://unpkg.com/lucide@latest" 
+        async 
+        onload="window.lucide?.createIcons()">
+    </script>
+
+    <link rel="stylesheet" href="/Style/tiposCadastro.css">
+</head>
+
+<body>
+
+    <main class="cadastro-tipo">
+
+        <!-- Logo -->
+        <header class="logo">
+            <img src="/assets/img/logo.png" alt="IdeiaTech">
+        </header>
+
+
+        <!-- Conteúdo principal -->
+        <section class="conteudo">
+
+            <div class="cabecalho">
+
+                <h1>Crie sua conta</h1>
+
+                <p>
+                    Como você pretende utilizar o sistema?
+                </p>
+
+            </div>
+
+
+            <!-- Opções de cadastro -->
+            <div class="cards">
+
+                <!-- Cliente -->
+                <a href="/register/cliente" class="card card-cliente">
+
+                    <div class="icone">
+                        <i data-lucide="user"></i>
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <h2> Sou cliente</h2>
+
+                        <p>
+                            Acompanhe seus serviços contratados,
+                            seus pedidos e faça orçamentos,
+                            tudo em tempo real.
+                        </p>
+
+                    </div>
+
+                    <i 
+                        class="seta"
+                        data-lucide="arrow-right">
+                    </i>
+
+                </a>
+
+
+                <!-- Administrador -->
+                <a href="/register/administrador" class="card card-administrador">
+
+                    <div class="icone">
+                        <i data-lucide="building-2"></i>
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <h2>Sou administrador</h2>
+
+                        <p>
+                            Gerencie usuários, permissões
+                            e tenha controle sobre o sistema.
+                        </p>
+
+                    </div>
+
+                    <i 
+                        class="seta"
+                        data-lucide="arrow-right">
+                    </i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Retorno para login -->
+            <p class="login-link">
+                Já possui uma conta?
+                <a href="/login">Entrar</a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script>
+        window.lucide?.createIcons();
+    </script>
+
+</body>
+
+</html>
