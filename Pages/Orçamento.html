@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento Rápido | Ideia Tech</title>
+
+    <link rel="stylesheet" href="../Style/Style.css">
+    <link rel="stylesheet" href="../Style/Orçamento.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="vitrine.html">Vitrine</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="orcamento.html">Orçamento</a></li>
+                <li><a href="#">Acompanhar</a></li>
+                <li>
+                    <a href="#">
+                        <i data-lucide="shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <a href="cliente/perfil.html">
+                <i data-lucide="user"></i>
+                Perfil
+            </a>
+        </nav>
+    </header>
+
+    <main class="pagina-orcamento">
+
+        <section class="orcamento-topo">
+
+            <div class="orcamento-apresentacao">
+
+                <span class="etiqueta-secao">ORÇAMENTO INTELIGENTE</span>
+
+                <h1>
+                    Descubra uma estimativa
+                    <span>antes de levar seu aparelho.</span>
+                </h1>
+
+                <p>
+                    Conte o que aconteceu com seu celular. Nossa inteligência
+                    identifica o possível serviço e apresenta uma faixa média
+                    de preço em poucos instantes.
+                </p>
+
+                <div class="vantagens-orcamento">
+
+                    <div>
+                        <i data-lucide="sparkles"></i>
+
+                        <span>
+                            <strong>Assistente inteligente</strong>
+                            Entende o problema descrito por você
+                        </span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="clock-3"></i>
+
+                        <span>
+                            <strong>Cerca de 2 minutos</strong>
+                            Sem precisar levar o aparelho inicialmente
+                        </span>
+                    </div>
+
+                    <div>
+                        <i data-lucide="shield-check"></i>
+
+                        <span>
+                            <strong>Sem compromisso</strong>
+                            Você decide se deseja continuar o atendimento
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="cartao-ia">
+
+                <div class="ia-topo">
+                    <div class="ia-identidade">
+                        <div class="ia-icone">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+
+                        <div>
+                            <span>Ideia AI</span>
+                            <small>Assistente de orçamento</small>
+                        </div>
+                    </div>
+
+                    <div class="ia-status">
+                        <span></span>
+                        Online
+                    </div>
+                </div>
+
+                <div class="ia-conversa">
+
+                    <div class="mensagem-ia">
+                        <i data-lucide="bot"></i>
+
+                        <p>
+                            Olá! Me conte o que aconteceu com seu aparelho
+                            e eu vou tentar identificar o reparo necessário.
+                        </p>
+                    </div>
+
+                    <div class="ia-exemplo">
+                        <span>Exemplo</span>
+
+                        <p>
+                            “Meu celular caiu e agora a tela está com manchas
+                            pretas e o touch não funciona.”
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="ia-rodape">
+                    <span>
+                        <i data-lucide="zap"></i>
+                        Análise rápida
+                    </span>
+
+                    <span>
+                        <i data-lucide="lock-keyhole"></i>
+                        Estimativa segura
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="area-orcamento">
+
+            <div class="formulario-container">
+
+                <div class="cabecalho-formulario">
+                    <div>
+                        <span>PASSO 01</span>
+                        <h2>Fale sobre seu aparelho</h2>
+                    </div>
+
+                    <span class="tempo-estimado">
+                        <i data-lucide="clock"></i>
+                        ~2 min
+                    </span>
+                </div>
+
+                <form id="formularioOrcamento">
+
+                    <div class="grupo-campos">
+
+                        <div class="campo">
+                            <label for="marca">Marca</label>
+
+                            <select id="marca" required>
+                                <option value="">Selecione a marca</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Samsung">Samsung</option>
+                                <option value="Motorola">Motorola</option>
+                                <option value="Xiaomi">Xiaomi</option>
+                                <option value="Outro">Outra</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="modelo">Modelo</label>
+
+                            <input
+                                type="text"
+                                id="modelo"
+                                placeholder="Ex: iPhone 15"
+                                required
+                            >
+                        </div>
+
+                    </div>
+
+                    <div class="campo">
+                        <label for="categoriaProblema">O que parece estar com problema?</label>
+
+                        <select id="categoriaProblema">
+                            <option value="">Não tenho certeza</option>
+                            <option value="tela">Tela ou touch</option>
+                            <option value="bateria">Bateria</option>
+                            <option value="carga">Carregamento</option>
+                            <option value="camera">Câmera</option>
+                            <option value="audio">Áudio ou microfone</option>
+                            <option value="placa">Aparelho não liga</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <div class="campo-titulo">
+                            <label for="descricaoProblema">Conte o que aconteceu</label>
+
+                            <span>
+                                <i data-lucide="sparkles"></i>
+                                Analisado pela Ideia AI
+                            </span>
+                        </div>
+
+                        <textarea
+                            id="descricaoProblema"
+                            rows="6"
+                            maxlength="500"
+                            placeholder="Ex: Meu celular caiu no chão. A tela trincou, apareceu uma mancha preta e agora parte do touch não responde..."
+                            required
+                        ></textarea>
+
+                        <div class="contador-texto">
+                            <span>Quanto mais detalhes, melhor a análise.</span>
+                            <span id="contadorCaracteres">0 / 500</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="botao-analisar" id="botaoAnalisar">
+                        <span>Analisar com Ideia AI</span>
+                        <i data-lucide="sparkles"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+            <aside class="painel-resultado" id="painelResultado">
+
+                <div class="resultado-espera" id="resultadoEspera">
+
+                    <div class="resultado-espera-icone">
+                        <i data-lucide="scan-search"></i>
+                    </div>
+
+                    <h3>Sua estimativa aparecerá aqui</h3>
+
+                    <p>
+                        Preencha as informações do aparelho e descreva
+                        o problema para iniciar a análise.
+                    </p>
+
+                </div>
+
+                <div class="resultado-carregando" id="resultadoCarregando">
+
+                    <div class="carregando-icone">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+
+                    <h3>Analisando seu relato...</h3>
+
+                    <p>
+                        Estamos relacionando os sintomas informados
+                        aos serviços disponíveis.
+                    </p>
+
+                    <div class="barra-carregamento">
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="resultado-conteudo" id="resultadoConteudo">
+
+                    <div class="resultado-cabecalho">
+
+                        <div>
+                            <span>ESTIMATIVA GERADA</span>
+                            <h3>Possível diagnóstico</h3>
+                        </div>
+
+                        <div class="resultado-ia">
+                            <i data-lucide="sparkles"></i>
+                            IA
+                        </div>
+
+                    </div>
+
+                    <div class="resultado-servico">
+
+                        <div class="resultado-servico-icone">
+                            <i data-lucide="wrench"></i>
+                        </div>
+
+                        <div>
+                            <span>Serviço identificado</span>
+                            <strong id="servicoIdentificado">Troca de tela</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="resultado-preco">
+                        <span>Faixa estimada</span>
+
+                        <strong id="precoEstimado">
+                            R$ 400 – R$ 550
+                        </strong>
+
+                        <small>
+                            Valor aproximado com base no serviço identificado.
+                        </small>
+                    </div>
+
+                    <div class="resultado-prazo">
+
+                        <i data-lucide="clock-3"></i>
+
+                        <div>
+                            <span>Prazo estimado</span>
+                            <strong id="prazoEstimado">1 a 3 dias úteis</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="aviso-estimativa">
+                        <i data-lucide="info"></i>
+
+                        <p>
+                            Esta é apenas uma estimativa. O valor definitivo
+                            será informado após a avaliação técnica do aparelho.
+                        </p>
+                    </div>
+
+                    <a href="#" class="botao-continuar">
+                        Solicitar atendimento
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </section>
+
+        <section class="como-funciona-orcamento">
+
+            <div class="cabecalho-secao">
+                <span class="etiqueta-secao">COMO FUNCIONA</span>
+
+                <h2>A IA ajuda. O técnico confirma.</h2>
+
+                <p>
+                    A tecnologia acelera o primeiro diagnóstico,
+                    enquanto a decisão final continua nas mãos da equipe técnica.
+                </p>
+            </div>
+
+            <div class="etapas-orcamento">
+
+                <article>
+                    <span>01</span>
+
+                    <i data-lucide="message-square-text"></i>
+
+                    <h3>Você descreve</h3>
+
+                    <p>
+                        Informe o aparelho e explique os sintomas
+                        ou o que aconteceu com ele.
+                    </p>
+                </article>
+
+                <article>
+                    <span>02</span>
+
+                    <i data-lucide="sparkles"></i>
+
+                    <h3>A IA interpreta</h3>
+
+                    <p>
+                        O sistema relaciona sua descrição aos possíveis
+                        serviços cadastrados.
+                    </p>
+                </article>
+
+                <article>
+                    <span>03</span>
+
+                    <i data-lucide="badge-dollar-sign"></i>
+
+                    <h3>Você recebe a estimativa</h3>
+
+                    <p>
+                        Uma faixa média de preço e prazo é apresentada
+                        antes da abertura do atendimento.
+                    </p>
+                </article>
+
+                <article>
+                    <span>04</span>
+
+                    <i data-lucide="wrench"></i>
+
+                    <h3>O técnico confirma</h3>
+
+                    <p>
+                        Após analisar fisicamente o aparelho,
+                        o orçamento definitivo é enviado para aprovação.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+   <p>Ideia Tech · Projeto desenvolvido no Senac DF · 2026</p>
+
+
+    </footer>
+</body>
+
+</body>
+
+</html>
