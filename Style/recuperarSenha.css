@@ -1,0 +1,5 @@
+/* IDEIATECH — Recuperação de senha. Requer auth-pages.css. */
+.auth-panel--recuperacao { max-width: 460px; }
+.auth-panel--recuperacao .auth-heading { margin-bottom: 25px; }
+.auth-panel--recuperacao .auth-form { gap: 20px; }
+.auth-panel--recuperacao .auth-bottom { margin-top: 25px; }

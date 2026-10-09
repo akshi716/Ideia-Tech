@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crie sua conta de cliente no IdeiaTech.">
+    <title>Cadastro de cliente | IdeiaTech</title>
+    <link rel="stylesheet" href="/Style/auth-pages.css">
+    <link rel="stylesheet" href="/Style/cadastroCliente.css">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+</head>
+<body>
+    <main class="auth-layout">
+        <aside class="auth-aside">
+            <a class="auth-brand" href="/Pages/index.html" aria-label="IdeiaTech - página inicial">
+                <i data-lucide="cpu" aria-hidden="true"></i><span>IdeiaTech</span>
+            </a>
+            <div class="auth-aside-copy">
+                <h1>Seus serviços, sempre ao seu alcance.</h1>
+                <p>Faça orçamentos, acompanhe o andamento dos serviços e consulte seus pedidos em um só lugar.</p>
+            </div>
+            <p class="auth-aside-foot">IdeiaTech · Gestão simples, informação transparente.</p>
+        </aside>
+
+        <section class="auth-main" aria-labelledby="titulo-cadastro">
+            <div class="auth-panel auth-panel--cliente">
+                <a class="auth-back" href="/Pages/tiposCadastro.html"><i data-lucide="arrow-left" aria-hidden="true"></i> Voltar às opções</a>
+                <header class="auth-heading">
+                    <h2 id="titulo-cadastro">Crie sua conta de cliente</h2>
+                    <p>Preencha seus dados para começar.</p>
+                </header>
+
+                <form class="auth-form" action="/register/cliente" method="POST" id="formCadastroCliente">
+                    <div class="form-field">
+                        <label for="nomeCliente">Nome completo</label>
+                        <input type="text" id="nomeCliente" name="nome" autocomplete="name" placeholder="Como podemos chamar você?" minlength="3" maxlength="120" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="emailCliente">E-mail</label>
+                        <input type="email" id="emailCliente" name="email" autocomplete="email" placeholder="voce@exemplo.com" maxlength="254" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="telefoneCliente">Telefone / WhatsApp</label>
+                        <input type="tel" id="telefoneCliente" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="20" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="senhaCliente">Senha</label>
+                            <input type="password" id="senhaCliente" name="senha" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" minlength="8" required>
+                            <small>Use pelo menos 8 caracteres.</small>
+                        </div>
+                        <div class="form-field">
+                            <label for="confirmarSenhaCliente">Confirmar senha</label>
+                            <input type="password" id="confirmarSenhaCliente" name="confirmarSenha" autocomplete="new-password" placeholder="Digite novamente" minlength="8" required>
+                        </div>
+                    </div>
+
+                    <label class="form-check" for="termosCliente">
+                        <input type="checkbox" id="termosCliente" name="aceitaTermos" required>
+                        <span>Li e concordo com os termos de uso e a política de privacidade.</span>
+                    </label>
+
+                    <button class="auth-submit" type="submit">Criar conta <i data-lucide="arrow-right" aria-hidden="true"></i></button>
+                </form>
+
+                <p class="auth-bottom">Já possui uma conta? <a href="/Pages/login.html">Entrar</a></p>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

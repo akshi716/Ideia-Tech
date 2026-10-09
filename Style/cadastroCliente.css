@@ -1,0 +1,5 @@
+/* IDEIATECH — Cadastro de cliente. Requer auth-pages.css. */
+.auth-panel--cliente { max-width: 540px; }
+.auth-panel--cliente .auth-heading { margin-bottom: 23px; }
+.auth-panel--cliente .auth-form { gap: 14px; }
+.auth-panel--cliente .auth-bottom { margin-top: 20px; }
