@@ -14,9 +14,12 @@
     </script>
 
     <link rel="stylesheet" href="/Style/tiposCadastro.css">
+    <script src="../Script/fluxoAutenticacao.js" defer></script>
+    <link rel="stylesheet" href="../Style/acessoCarrinho.css">
 </head>
 
 <body>
+    <a href="Carrinho.html" class="acesso-carrinho carrinho-atalho" aria-label="Ver carrinho">Carrinho</a>
 
     <main class="cadastro-tipo">
 
@@ -44,7 +47,7 @@
             <div class="cards">
 
                 <!-- Cliente -->
-                <a href="/register/cliente" class="card card-cliente">
+                <a data-link-autenticacao href="/register/cliente" class="card card-cliente">
 
                     <div class="icone">
                         <i data-lucide="user"></i>
@@ -71,7 +74,7 @@
 
 
                 <!-- Administrador -->
-                <a href="/register/administrador" class="card card-administrador">
+                <a data-link-autenticacao href="/register/administrador" class="card card-administrador">
 
                     <div class="icone">
                         <i data-lucide="building-2"></i>
@@ -101,7 +104,7 @@
             <!-- Retorno para login -->
             <p class="login-link">
                 Já possui uma conta?
-                <a href="/login">Entrar</a>
+                <a href="login.html" data-link-autenticacao>Entrar</a>
             </p>
 
         </section>

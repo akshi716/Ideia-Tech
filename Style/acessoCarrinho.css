@@ -1,0 +1,21 @@
+/* Acesso ao carrinho nos menus e nas páginas sem navegação principal. */
+.acesso-carrinho { display: inline-flex; align-items: center; gap: 6px; }
+.acesso-carrinho svg { width: 18px; height: 18px; flex-shrink: 0; }
+.carrinho-atalho {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 110;
+    min-height: 44px;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border: 1px solid #d2dddd;
+    border-radius: 8px;
+    background: #fff;
+    color: #061922;
+    font: 600 14px/1.5 Arial, sans-serif;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #06192214;
+}
+.carrinho-atalho:hover { background: #e8efee; }
+.carrinho-atalho:focus-visible { outline: 3px solid #008b7c; outline-offset: 3px; }

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../Style/vitrine.css">
 
     <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
+    <link rel="stylesheet" href="../Style/acessoCarrinho.css">
 </head>
 
 <body>
@@ -21,7 +22,7 @@
                 <li><a href="../Pages/Servicos.html">Serviços</a></li>
                 <li><a href="../Pages/">Orçamento</a></li>
                 <li><a href="Acompanhar.html">Acompanhar</a></li>
-                <a href="../Pages/Carrinho.html"><i data-lucide="ShoppingCartPlus"></i></a>
+                <li><a href="Carrinho.html" aria-label="Ver carrinho"><i data-lucide="ShoppingCartPlus"></i> Carrinho (<span data-contador-carrinho>0</span>)</a></li>
             </ul>
 
             <!-- Mudança de tema -->
@@ -82,7 +83,7 @@
                                 <span class="produto-estoque">24 em estoque</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="carregador-turbo">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -110,7 +111,7 @@
                                 <span class="produto-estoque">60 em estoque</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="pelicula-3d">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -138,7 +139,7 @@
                                 <span class="produto-estoque estoque-baixo">Últimas 5 unidades</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="capinha">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -166,7 +167,7 @@
                                 <span class="produto-estoque">38 em estoque</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="cabo-usbc">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -205,7 +206,7 @@
                                 <span class="produto-estoque">9 em estoque</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="camera-traseira">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -235,7 +236,7 @@
                                 <span class="produto-estoque">15 em estoque</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="botao-power">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -264,7 +265,7 @@
                                 <span class="produto-estoque estoque-baixo">Últimas 3 unidades</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="tampa-traseira">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -292,7 +293,7 @@
                                 <span class="produto-estoque estoque-baixo">Últimas 2 unidades</span>
                             </div>
 
-                            <button type="button" class="botao-carrinho">
+                            <button type="button" class="botao-carrinho" data-produto-id="placa-mae">
                                 <i data-lucide="shopping-cart"></i>
                                 Adicionar ao carrinho
                             </button>
@@ -331,7 +332,8 @@
     </footer>
 </body>
 
-<script src="../Script/Script.js"></script>
+<script src="../Script/catalogoProdutos.js"></script>
+<script src="../Script/carrinho.js"></script>
 
 <script>window.lucide?.createIcons();</script>
 

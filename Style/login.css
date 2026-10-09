@@ -35,7 +35,9 @@ html {
 
 body {
     min-height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    grid-template-rows: 1fr auto;
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.5;
     color: var(--texto);
@@ -55,8 +57,8 @@ a {
 .slogan {
     position: relative;
     isolation: isolate;
-    width: 52%;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 0;
     padding: 150px 7% 80px;
     display: flex;
     flex-direction: column;
@@ -112,8 +114,8 @@ a {
 
 /* Área do formulário */
 .login-form {
-    width: 48%;
-    min-height: 100vh;
+    width: 100%;
+    min-height: 0;
     padding: 64px clamp(28px, 7vw, 100px);
     display: flex;
     flex-direction: column;
@@ -281,10 +283,19 @@ a {
     text-decoration: underline;
 }
 
+/* Rodapé compacto abaixo das duas colunas */
+body > footer {
+    grid-column: 1 / -1;
+    min-height: 44px;
+    padding: 12px 20px;
+    font-size: 12px;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
     body {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
     }
 
     .slogan,
@@ -373,3 +384,5 @@ a {
     }
     .login-form button:hover, .social-login a:hover { transform: none; }
 }
+
+.aviso-retorno { max-width: 440px; margin-bottom: 20px; padding: 14px; background: var(--fundo); border-radius: 8px; color: var(--texto-secundario); font-size: 14px; }
