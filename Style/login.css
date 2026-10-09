@@ -11,7 +11,7 @@
     --azul-claro: #73B1B8;
     --verde: #95C4BD;
     --verde-claro: #A9D2C1;
-    --fundo: var(--fundo-pagina);
+    --fundo: #E8EFEE;
     --branco: #FFFFFF;
     --texto: #061922;
     --texto-secundario: #647277;
@@ -64,7 +64,7 @@ a {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    background: var(--fundo-pagina);
+    background: linear-gradient(145deg, #e3edeb 0%, #dce8e5 55%, #d4e3df 100%);
 }
 
 .slogan > img:first-child {
@@ -120,7 +120,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--fundo-pagina);
+    background: var(--branco);
 }
 
 .login-form h2 {
