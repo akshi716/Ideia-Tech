@@ -1,6 +1,20 @@
 /* IDEIATECH — Cadastro de empresa. Requer auth-pages.css. */
-.auth-panel--empresa { max-width: 600px; }
-.auth-panel--empresa .auth-heading { margin-bottom: 22px; }
-.auth-panel--empresa .auth-form { gap: 13px; }
-.auth-panel--empresa .auth-bottom { margin-top: 19px; }
-.empresa-nota { margin-top: -2px; }
+.auth-panel--empresa {
+    max-width: 600px;
+}
+
+.auth-panel--empresa .auth-heading {
+    margin-bottom: 22px;
+}
+
+.auth-panel--empresa .auth-form {
+    gap: 13px;
+}
+
+.auth-panel--empresa .auth-bottom {
+    margin-top: 19px;
+}
+
+.empresa-nota {
+    margin-top: -2px;
+}

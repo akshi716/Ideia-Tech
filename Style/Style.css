@@ -666,54 +666,219 @@ footer {
     min-height: 100px;
 
     background: #071820;
-}/* Ajustes de leitura e de espaçamento para a loja. */
-body { font-family: "DM Sans", sans-serif; }
-.apresentação::before { content: "IDEIA TECH / ASSISTÊNCIA E ACESSÓRIOS"; letter-spacing: 1px; font-size: 11px; }
-.apresentação h1 { max-width: 530px; font-family: "Manrope", sans-serif; font-size: clamp(38px,5vw,64px); font-weight: 800; line-height: 1.1; letter-spacing: -2.5px; margin-bottom: 24px; }
-.apresentação p { width: auto; max-width: 470px; font-size: 17px; line-height: 1.7; }
-.diagrama-iphone img { height: auto; object-fit: contain; }
-.texto-destaque { letter-spacing: 1px; font-size: 11px; }
-.card-conteudo p, .etapa-conteudo p { font-size: 15px; }
-.card-destaque .card-conteudo p { color: #b7c6cb; }
-.processo-apresentacao > p { font-size: 16px; }
-.card-acao:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,30,35,.06); }
-.nota-atendimento { width: min(var(--largura-site),92%); margin: 0 auto 80px; padding: 24px 0; border-top: 1px solid var(--cor-borda); border-bottom: 1px solid var(--cor-borda); display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.nota-atendimento p { max-width: 660px; color: var(--cor-texto-secundario); }
-.nota-atendimento strong { display: block; color: var(--cor-texto); margin-bottom: 4px; }
-.nota-atendimento a { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
-footer { display: flex; align-items: center; justify-content: center; padding: 24px; color: #b7c6cb; font-size: 13px; text-align: center; }
-a:focus-visible, button:focus-visible { outline: 3px solid var(--cor-primaria-escura); outline-offset: 4px; }
+}
+
+/* Ajustes de leitura e de espaçamento para a loja. */
+body {
+    font-family: "DM Sans", sans-serif;
+}
+
+.apresentação::before {
+    content: "IDEIA TECH / ASSISTÊNCIA E ACESSÓRIOS";
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+
+.apresentação h1 {
+    max-width: 530px;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+}
+
+.apresentação p {
+    width: auto;
+    max-width: 470px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.diagrama-iphone img {
+    height: auto;
+    object-fit: contain;
+}
+
+.texto-destaque {
+    letter-spacing: 1px;
+    font-size: 11px;
+}
+
+.card-conteudo p,
+.etapa-conteudo p {
+    font-size: 15px;
+}
+
+.card-destaque .card-conteudo p {
+    color: #b7c6cb;
+}
+
+.processo-apresentacao>p {
+    font-size: 16px;
+}
+
+.card-acao:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 30, 35, .06);
+}
+
+.nota-atendimento {
+    width: min(var(--largura-site), 92%);
+    margin: 0 auto 80px;
+    padding: 24px 0;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.nota-atendimento p {
+    max-width: 660px;
+    color: var(--cor-texto-secundario);
+}
+
+.nota-atendimento strong {
+    display: block;
+    color: var(--cor-texto);
+    margin-bottom: 4px;
+}
+
+.nota-atendimento a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #b7c6cb;
+    font-size: 13px;
+    text-align: center;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--cor-primaria-escura);
+    outline-offset: 4px;
+}
+
 @media (max-width: 900px) {
-    nav ul { gap: 16px; }
-    .hero { gap: 30px; }
-    .hero-botoes { flex-wrap: wrap; }
-    .diagrama-iphone { padding: 20px; }
-    .processo { gap: 40px; }
+    nav ul {
+        gap: 16px;
+    }
+
+    .hero {
+        gap: 30px;
+    }
+
+    .hero-botoes {
+        flex-wrap: wrap;
+    }
+
+    .diagrama-iphone {
+        padding: 20px;
+    }
+
+    .processo {
+        gap: 40px;
+    }
 }
+
 @media (max-width: 700px) {
-    header { height: auto; }
-    nav { flex-wrap: wrap; gap: 12px; padding: 14px 0; }
-    nav ul { flex-wrap: wrap; gap: 12px 18px; }
-    nav ul li a::after { display: none; }
-    nav > a { padding: 6px 12px; }
-    .hero { grid-template-columns: 1fr; margin: 40px auto; }
-    .apresentação h1 { letter-spacing: -1.5px; }
-    .diagrama-iphone { max-width: 460px; width: 100%; justify-self: center; }
-    .nota-atendimento { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 48px; }
-    .cards-acoes { grid-template-columns: 1fr; }
-    .card-acao { min-height: 210px; gap: 24px; }
-    .cabecalho-secao h2, .processo-apresentacao h2 { font-size: 34px; line-height: 1.15; letter-spacing: -1px; }
-    .proximo-passo { padding-bottom: 48px; }
-    .processo { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; }
+    header {
+        height: auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    nav ul li a::after {
+        display: none;
+    }
+
+    nav>a {
+        padding: 6px 12px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+    }
+
+    .apresentação h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .diagrama-iphone {
+        max-width: 460px;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .nota-atendimento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 48px;
+    }
+
+    .cards-acoes {
+        grid-template-columns: 1fr;
+    }
+
+    .card-acao {
+        min-height: 210px;
+        gap: 24px;
+    }
+
+    .cabecalho-secao h2,
+    .processo-apresentacao h2 {
+        font-size: 34px;
+        line-height: 1.15;
+        letter-spacing: -1px;
+    }
+
+    .proximo-passo {
+        padding-bottom: 48px;
+    }
+
+    .processo {
+        grid-template-columns: 1fr;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
 }
+
 /* Mantém feedback suave de cor sem deslocamentos no modo de movimento reduzido. */
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
         transition-property: color, background-color, border-color, box-shadow, opacity !important;
         transition-duration: 180ms !important;
         transition-timing-function: ease !important;
     }
+
     .hero-botoes a:hover,
     .card-acao:hover,
     .card-produto:hover,
@@ -727,13 +892,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--cor-primaria-es
     .botao-secundario:hover,
     .card-servico:hover,
     .card-servico:hover::before,
-    .card-servico:hover > a svg,
-    .lista-diferenciais > div:hover,
-    .chamada-servico > a:hover,
+    .card-servico:hover>a svg,
+    .lista-diferenciais>div:hover,
+    .chamada-servico>a:hover,
     .botao-analisar:hover,
     .botao-continuar:hover,
     .etapas-orcamento article:hover {
         transform: none !important;
     }
-    .card-produto:hover .produto-foto img { filter: none; }
+
+    .card-produto:hover .produto-foto img {
+        filter: none;
+    }
 }

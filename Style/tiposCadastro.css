@@ -220,6 +220,13 @@ a {
     }
 
     .cadastro-tipo .logo {
+<<<<<<< HEAD
+=======
+        height: auto;
+        display: block;
+        border-bottom: 0;
+        background: transparent;
+>>>>>>> 50e5f31c02f8f697fc6f715efec9af2ae417fc5b
         top: 28px;
         left: 6%;
         width: 160px;
@@ -245,6 +252,14 @@ a {
     }
 
     .cadastro-tipo .logo {
+<<<<<<< HEAD
+=======
+        height: auto;
+        display: block;
+        border-bottom: 0;
+        background: transparent;
+        top: 22px;
+>>>>>>> 50e5f31c02f8f697fc6f715efec9af2ae417fc5b
         left: 22px;
         width: 140px;
     }
@@ -279,6 +294,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -287,6 +303,7 @@ a {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+<<<<<<< HEAD
 }
 
 /* Marca textual enquanto o arquivo de logotipo não está no repositório */
@@ -307,3 +324,11 @@ a {
     height: 29px;
     stroke-width: 1.8;
 }
+=======
+
+    .card:hover,
+    .card:hover .seta {
+        transform: none;
+    }
+}
+>>>>>>> 50e5f31c02f8f697fc6f715efec9af2ae417fc5b

@@ -1,14 +1,469 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="pt-br">
+
 <head>
-    <link rel="stylesheet" href="../Style/Style.css">
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil</title>
-    <link rel="stylesheet" href="../Style/acessoCarrinho.css">
+
+    <title>Perfil | Ideia Tech</title>
+
+    <link rel="stylesheet" href="../Style/Style.css">
+    <link rel="stylesheet" href="../Style/perfil.css">
+
+    <script
+        src="https://unpkg.com/lucide@latest"
+        async
+        onload="window.lucide?.createIcons()">
+    </script>
 </head>
+
 <body>
-    <a href="Carrinho.html" class="acesso-carrinho carrinho-atalho" aria-label="Ver carrinho">Carrinho</a>
-    
+
+    <header>
+        <nav>
+
+            <ul>
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+
+                <li>
+                    <a href="vitrine.html">Vitrine</a>
+                </li>
+
+                <li>
+                    <a href="Servicos.html">Serviços</a>
+                </li>
+
+                <li>
+                    <a href="Orçamento.html">Orçamento</a>
+                </li>
+
+                <li>
+                    <a href="Acompanhar.html">Acompanhar</a>
+                </li>
+
+                <li>
+                    <a href="Carrinho.html">
+                        <i data-lucide="shopping-cart"></i>
+                        Carrinho
+                    </a>
+                </li>
+            </ul>
+
+            <a
+                href="Perfil.html"
+                class="perfil-menu"
+                aria-current="page"
+            >
+                <i data-lucide="user"></i>
+                Perfil
+            </a>
+
+        </nav>
+    </header>
+
+
+    <main class="perfil-pagina">
+
+        <!-- CABEÇALHO DO PERFIL -->
+
+        <section class="perfil-cabecalho">
+
+            <div class="perfil-identidade">
+
+                <div class="perfil-avatar">
+                    <i data-lucide="user-round"></i>
+                </div>
+
+                <div>
+                    <span class="texto-destaque">
+                        MINHA CONTA
+                    </span>
+
+                    <h1>
+                        Olá,
+                        <span id="nome-usuario">
+                            Cliente
+                        </span>
+                    </h1>
+
+                    <p>
+                        Gerencie seus dados, pedidos e serviços
+                        em um só lugar.
+                    </p>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="botao-editar"
+                id="botao-editar-perfil"
+            >
+                <i data-lucide="pencil"></i>
+                Editar perfil
+            </button>
+
+        </section>
+
+
+        <!-- ATALHOS -->
+
+        <section class="perfil-atalhos">
+
+            <a
+                href="Acompanhar.html"
+                class="card-atalho"
+            >
+                <div class="atalho-icone">
+                    <i data-lucide="wrench"></i>
+                </div>
+
+                <div>
+                    <h2>Acompanhar serviço</h2>
+
+                    <p>
+                        Consulte o andamento das suas ordens
+                        de serviço.
+                    </p>
+                </div>
+
+                <i
+                    data-lucide="arrow-up-right"
+                    class="atalho-seta"
+                ></i>
+            </a>
+
+
+            <a
+                href="Carrinho.html"
+                class="card-atalho"
+            >
+                <div class="atalho-icone">
+                    <i data-lucide="shopping-bag"></i>
+                </div>
+
+                <div>
+                    <h2>Meus pedidos</h2>
+
+                    <p>
+                        Veja seus produtos e compras realizadas.
+                    </p>
+                </div>
+
+                <i
+                    data-lucide="arrow-up-right"
+                    class="atalho-seta"
+                ></i>
+            </a>
+
+
+            <a
+                href="Orçamento.html"
+                class="card-atalho"
+            >
+                <div class="atalho-icone">
+                    <i data-lucide="file-text"></i>
+                </div>
+
+                <div>
+                    <h2>Novo orçamento</h2>
+
+                    <p>
+                        Solicite uma análise para celular
+                        ou computador.
+                    </p>
+                </div>
+
+                <i
+                    data-lucide="arrow-up-right"
+                    class="atalho-seta"
+                ></i>
+            </a>
+
+        </section>
+
+
+        <!-- DADOS PRINCIPAIS -->
+
+        <section class="perfil-conteudo">
+
+            <!-- DADOS PESSOAIS -->
+
+            <div class="perfil-card">
+
+                <div class="perfil-card-topo">
+
+                    <div>
+                        <span class="card-etiqueta">
+                            CONTA
+                        </span>
+
+                        <h2>Dados pessoais</h2>
+                    </div>
+
+                    <i data-lucide="user-round"></i>
+
+                </div>
+
+
+                <div class="lista-dados">
+
+                    <div class="dado-item">
+
+                        <span class="dado-label">
+                            Nome
+                        </span>
+
+                        <strong id="perfil-nome">
+                            Nome do cliente
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dado-item">
+
+                        <span class="dado-label">
+                            E-mail
+                        </span>
+
+                        <strong id="perfil-email">
+                            email@exemplo.com
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dado-item">
+
+                        <span class="dado-label">
+                            Telefone
+                        </span>
+
+                        <strong id="perfil-telefone">
+                            (00) 00000-0000
+                        </strong>
+
+                    </div>
+
+
+                    <div class="dado-item">
+
+                        <span class="dado-label">
+                            CPF
+                        </span>
+
+                        <strong id="perfil-cpf">
+                            ***.***.***-**
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ENDEREÇO -->
+
+            <div class="perfil-card">
+
+                <div class="perfil-card-topo">
+
+                    <div>
+                        <span class="card-etiqueta">
+                            ENDEREÇO
+                        </span>
+
+                        <h2>Endereço principal</h2>
+                    </div>
+
+                    <i data-lucide="map-pin"></i>
+
+                </div>
+
+
+                <div class="endereco">
+
+                    <strong id="perfil-endereco">
+                        Endereço não informado
+                    </strong>
+
+                    <p id="perfil-cidade">
+                        Cidade - UF
+                    </p>
+
+                    <p id="perfil-cep">
+                        CEP 00000-000
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="botao-secundario"
+                    id="botao-editar-endereco"
+                >
+                    <i data-lucide="pencil"></i>
+                    Alterar endereço
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- HISTÓRICO DE SERVIÇOS -->
+
+        <section class="perfil-card perfil-historico">
+
+            <div class="perfil-card-topo">
+
+                <div>
+                    <span class="card-etiqueta">
+                        ATIVIDADE
+                    </span>
+
+                    <h2>Últimos serviços</h2>
+                </div>
+
+                <i data-lucide="history"></i>
+
+            </div>
+
+
+            <div class="historico-lista">
+
+                <!-- Serviço de exemplo -->
+
+                <div class="historico-item">
+
+                    <div class="historico-icone">
+                        <i data-lucide="smartphone"></i>
+                    </div>
+
+                    <div class="historico-info">
+
+                        <strong>
+                            Troca de tela
+                        </strong>
+
+                        <span>
+                            Smartphone
+                        </span>
+
+                    </div>
+
+                    <div class="historico-status">
+
+                        <span class="status status-andamento">
+                            Em andamento
+                        </span>
+
+                        <small>
+                            OS-2026-0148
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Serviço de exemplo -->
+
+                <div class="historico-item">
+
+                    <div class="historico-icone">
+                        <i data-lucide="monitor"></i>
+                    </div>
+
+                    <div class="historico-info">
+
+                        <strong>
+                            Limpeza e manutenção
+                        </strong>
+
+                        <span>
+                            Computador desktop
+                        </span>
+
+                    </div>
+
+                    <div class="historico-status">
+
+                        <span class="status status-concluido">
+                            Concluído
+                        </span>
+
+                        <small>
+                            OS-2026-0102
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEGURANÇA -->
+
+        <section class="perfil-acoes">
+
+            <div>
+                <h2>Segurança da conta</h2>
+
+                <p>
+                    Gerencie sua senha e as configurações
+                    de acesso.
+                </p>
+            </div>
+
+
+            <div class="acoes-botoes">
+
+                <a
+                    href="recuperarSenha.html"
+                    class="botao-secundario"
+                >
+                    <i data-lucide="key-round"></i>
+                    Alterar senha
+                </a>
+
+                <button
+                    type="button"
+                    class="botao-sair"
+                    id="botao-sair"
+                >
+                    <i data-lucide="log-out"></i>
+                    Sair da conta
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Ideia Tech · Projeto desenvolvido no Senac DF · 2026
+        </p>
+    </footer>
+
+
+    <script>
+        window.lucide?.createIcons();
+    </script>
+
 </body>
+
 </html>

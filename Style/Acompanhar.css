@@ -1,96 +1,584 @@
 /* Acompanhamento de OS: mesma paleta, tipografia e espaçamento do site. */
-nav ul li:first-child a { color: var(--cor-texto); }
-nav ul li:first-child a::after { display: none; }
-nav ul li:first-child a:hover { color: var(--cor-primaria-escura); }
-nav a[aria-current="page"] { color: var(--cor-primaria-escura); position: relative; }
-nav a[aria-current="page"]::after { content: ""; position: absolute; left: 0; bottom: -27px; width: 100%; height: 2px; background: var(--cor-primaria); }
-.pagina-acompanhar { width: min(var(--largura-site), 92%); margin: 70px auto 80px; }
-.acompanhar-topo { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 32px; }
-.acompanhar-topo h1 { max-width: 650px; font-family: "Manrope", sans-serif; font-size: clamp(38px, 5vw, 64px); line-height: 1.1; letter-spacing: -2.5px; margin-bottom: 20px; }
-.acompanhar-topo h1 span { color: var(--cor-primaria-escura); }
-.acompanhar-topo p { max-width: 570px; font-size: 17px; line-height: 1.7; color: var(--cor-texto-secundario); }
-.link-atendimento { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; font-size: 14px; font-weight: 600; padding: 12px 0; border-bottom: 1px solid var(--cor-borda); transition: color 220ms ease, border-color 220ms ease; }
-.link-atendimento:hover { color: var(--cor-primaria-escura); border-color: var(--cor-primaria-escura); }
-.aviso-exemplo { display: flex; align-items: flex-start; gap: 12px; padding: 16px 20px; margin-bottom: 24px; background: var(--cor-fundo-secundario); border: 1px solid var(--cor-borda); border-radius: 8px; font-size: 14px; }
-.aviso-exemplo svg { flex-shrink: 0; margin-top: 2px; color: var(--cor-primaria-escura); }
-.ordem-servico, .historico-ordem, .duvidas-ordem { background: var(--cor-branca); border: 1px solid var(--cor-borda); border-radius: 12px; }
-.ordem-servico { padding: 32px; }
-.ordem-cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
-.ordem-cabecalho h2 { font-family: "Manrope", sans-serif; font-size: 28px; letter-spacing: -1px; }
-.ordem-cabecalho h2 span { display: block; font-family: "DM Sans", sans-serif; font-size: 15px; font-weight: 400; letter-spacing: 0; margin-top: 4px; color: var(--cor-texto-secundario); }
-.status-atual { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 30px; background: #dff3ee; color: #075e52; font-size: 14px; font-weight: 700; white-space: nowrap; }
-.resumo-ordem { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 28px 0 32px; padding: 24px 0; border-top: 1px solid var(--cor-borda); border-bottom: 1px solid var(--cor-borda); }
-.resumo-ordem dt { font-size: 13px; color: var(--cor-texto-secundario); margin-bottom: 6px; }
-.resumo-ordem dd { font-size: 15px; font-weight: 600; }
-.etapas-cabecalho { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 24px; }
-.etapas-cabecalho h3 { font-size: 16px; }
-.etapas-cabecalho > span { color: var(--cor-texto-secundario); font-size: 13px; }
-.etapas-reparo { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); list-style: none; margin-bottom: 28px; }
-.etapas-reparo li { position: relative; display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; padding: 0 4px; }
-.etapas-reparo li:not(:last-child)::after { content: ""; position: absolute; top: 19px; left: calc(50% + 24px); width: calc(100% - 48px); height: 2px; background: var(--cor-borda); }
-.etapas-reparo li.etapa-concluida:not(:last-child)::after { background: var(--cor-primaria-escura); }
-.marcador-etapa { display: grid; place-items: center; width: 40px; height: 40px; margin-bottom: 6px; border: 1px solid var(--cor-borda); border-radius: 50%; background: var(--cor-fundo); color: var(--cor-texto-secundario); font-size: 13px; font-weight: 700; }
-.etapa-concluida .marcador-etapa { background: #dff3ee; border-color: #b6dbd1; color: #075e52; font-size: 18px; }
-.etapa-atual .marcador-etapa { background: var(--cor-primaria-escura); border-color: var(--cor-primaria-escura); color: white; }
-.etapas-reparo strong { font-size: 13px; }
-.etapas-reparo li > span:last-child { font-size: 12px; color: var(--cor-texto-secundario); }
-.etapa-atual strong { color: #075e52; }
-.situacao-reparo { display: flex; gap: 16px; align-items: flex-start; padding: 22px; background: var(--cor-fundo-secundario); border-radius: 8px; }
-.icone-situacao { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 8px; background: #d0e5de; color: #075e52; }
-.situacao-reparo h3 { font-size: 16px; margin-bottom: 6px; }
-.situacao-reparo p { color: var(--cor-texto-secundario); font-size: 15px; line-height: 1.7; max-width: 750px; }
-.detalhes-acompanhamento { display: grid; grid-template-columns: 1.2fr 1fr; align-items: start; gap: 24px; margin-top: 24px; }
-.historico-ordem { padding: 32px; }
-.cabecalho-painel h2, .recado-tecnico h2, .duvidas-ordem h2 { font-family: "Manrope", sans-serif; font-size: 22px; letter-spacing: -.6px; line-height: 1.3; }
-.lista-historico { list-style: none; margin-top: 28px; }
-.lista-historico li { position: relative; display: flex; gap: 18px; padding-bottom: 26px; }
-.lista-historico li:last-child { padding-bottom: 0; }
-.lista-historico li:not(:last-child)::before { content: ""; position: absolute; left: 5px; top: 18px; bottom: 3px; width: 1px; background: var(--cor-borda); }
-.ponto-historico { width: 11px; height: 11px; flex-shrink: 0; border-radius: 50%; background: #b1c2be; margin-top: 5px; }
-.lista-historico li:first-child .ponto-historico { background: var(--cor-primaria-escura); }
-.lista-historico time { font-size: 12px; color: var(--cor-texto-secundario); }
-.lista-historico h3 { font-size: 16px; margin: 5px 0; }
-.lista-historico p { color: var(--cor-texto-secundario); font-size: 15px; line-height: 1.65; }
-.informacoes-ordem { display: grid; gap: 24px; min-width: 0; }
-.recado-tecnico { padding: 28px; border-radius: 12px; background: #071820; color: #f4f7f7; }
-.recado-tecnico .texto-destaque { color: #98e7de; }
-.recado-tecnico p { margin-top: 16px; color: #b7c6cb; font-size: 15px; line-height: 1.75; }
-.recado-tecnico p strong { color: #f4f7f7; font-weight: 600; }
-.recado-rodape { display: flex; align-items: center; gap: 10px; margin-top: 24px; padding-top: 18px; border-top: 1px solid #30444c; color: #b7c6cb; font-size: 12px; }
-.duvidas-ordem { padding: 28px; }
-.duvidas-ordem h2 { margin-bottom: 18px; }
-.duvidas-ordem details { border-top: 1px solid var(--cor-borda); }
-.duvidas-ordem summary { padding: 16px 0; cursor: pointer; font-size: 14px; font-weight: 600; transition: color 220ms ease; }
-.duvidas-ordem summary:hover { color: var(--cor-primaria-escura); }
-.duvidas-ordem summary:focus-visible { outline: 3px solid var(--cor-primaria-escura); outline-offset: 3px; border-radius: 3px; }
-.duvidas-ordem details p { padding-bottom: 18px; color: var(--cor-texto-secundario); font-size: 14px; line-height: 1.7; }
-.chamada-acompanhar { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-top: 40px; padding: 28px 0; border-top: 1px solid var(--cor-borda); }
-.chamada-acompanhar h2 { font-family: "Manrope", sans-serif; font-size: 24px; letter-spacing: -.7px; margin-bottom: 8px; }
-.chamada-acompanhar p { font-size: 15px; color: var(--cor-texto-secundario); }
-.botao-acompanhar { display: inline-flex; align-items: center; justify-content: center; gap: 9px; flex-shrink: 0; min-height: 46px; padding: 12px 20px; background: var(--cor-primaria); color: #002d29; border-radius: 6px; font-size: 14px; font-weight: 700; transition: background-color 240ms ease, box-shadow 240ms ease; }
-.botao-acompanhar:hover { background: #0cb19d; box-shadow: 0 5px 14px rgba(0, 80, 70, .12); }
+nav ul li:first-child a {
+    color: var(--cor-texto);
+}
+
+nav ul li:first-child a::after {
+    display: none;
+}
+
+nav ul li:first-child a:hover {
+    color: var(--cor-primaria-escura);
+}
+
+nav a[aria-current="page"] {
+    color: var(--cor-primaria-escura);
+    position: relative;
+}
+
+nav a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+    width: 100%;
+    height: 2px;
+    background: var(--cor-primaria);
+}
+
+.pagina-acompanhar {
+    width: min(var(--largura-site), 92%);
+    margin: 70px auto 80px;
+}
+
+.acompanhar-topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.acompanhar-topo h1 {
+    max-width: 650px;
+    font-family: "Manrope", sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -2.5px;
+    margin-bottom: 20px;
+}
+
+.acompanhar-topo h1 span {
+    color: var(--cor-primaria-escura);
+}
+
+.acompanhar-topo p {
+    max-width: 570px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--cor-texto-secundario);
+}
+
+.link-atendimento {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    transition: color 220ms ease, border-color 220ms ease;
+}
+
+.link-atendimento:hover {
+    color: var(--cor-primaria-escura);
+    border-color: var(--cor-primaria-escura);
+}
+
+.aviso-exemplo {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    background: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.aviso-exemplo svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--cor-primaria-escura);
+}
+
+.ordem-servico,
+.historico-ordem,
+.duvidas-ordem {
+    background: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: 12px;
+}
+
+.ordem-servico {
+    padding: 32px;
+}
+
+.ordem-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.ordem-cabecalho h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.ordem-cabecalho h2 span {
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 4px;
+    color: var(--cor-texto-secundario);
+}
+
+.status-atual {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    background: #dff3ee;
+    color: #075e52;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.resumo-ordem {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin: 28px 0 32px;
+    padding: 24px 0;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.resumo-ordem dt {
+    font-size: 13px;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 6px;
+}
+
+.resumo-ordem dd {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.etapas-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.etapas-cabecalho h3 {
+    font-size: 16px;
+}
+
+.etapas-cabecalho>span {
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+}
+
+.etapas-reparo {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    list-style: none;
+    margin-bottom: 28px;
+}
+
+.etapas-reparo li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    padding: 0 4px;
+}
+
+.etapas-reparo li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: calc(50% + 24px);
+    width: calc(100% - 48px);
+    height: 2px;
+    background: var(--cor-borda);
+}
+
+.etapas-reparo li.etapa-concluida:not(:last-child)::after {
+    background: var(--cor-primaria-escura);
+}
+
+.marcador-etapa {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 6px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 50%;
+    background: var(--cor-fundo);
+    color: var(--cor-texto-secundario);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.etapa-concluida .marcador-etapa {
+    background: #dff3ee;
+    border-color: #b6dbd1;
+    color: #075e52;
+    font-size: 18px;
+}
+
+.etapa-atual .marcador-etapa {
+    background: var(--cor-primaria-escura);
+    border-color: var(--cor-primaria-escura);
+    color: white;
+}
+
+.etapas-reparo strong {
+    font-size: 13px;
+}
+
+.etapas-reparo li>span:last-child {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.etapa-atual strong {
+    color: #075e52;
+}
+
+.situacao-reparo {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 22px;
+    background: var(--cor-fundo-secundario);
+    border-radius: 8px;
+}
+
+.icone-situacao {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #d0e5de;
+    color: #075e52;
+}
+
+.situacao-reparo h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.situacao-reparo p {
+    color: var(--cor-texto-secundario);
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 750px;
+}
+
+.detalhes-acompanhamento {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.historico-ordem {
+    padding: 32px;
+}
+
+.cabecalho-painel h2,
+.recado-tecnico h2,
+.duvidas-ordem h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 22px;
+    letter-spacing: -.6px;
+    line-height: 1.3;
+}
+
+.lista-historico {
+    list-style: none;
+    margin-top: 28px;
+}
+
+.lista-historico li {
+    position: relative;
+    display: flex;
+    gap: 18px;
+    padding-bottom: 26px;
+}
+
+.lista-historico li:last-child {
+    padding-bottom: 0;
+}
+
+.lista-historico li:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 18px;
+    bottom: 3px;
+    width: 1px;
+    background: var(--cor-borda);
+}
+
+.ponto-historico {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #b1c2be;
+    margin-top: 5px;
+}
+
+.lista-historico li:first-child .ponto-historico {
+    background: var(--cor-primaria-escura);
+}
+
+.lista-historico time {
+    font-size: 12px;
+    color: var(--cor-texto-secundario);
+}
+
+.lista-historico h3 {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.lista-historico p {
+    color: var(--cor-texto-secundario);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.informacoes-ordem {
+    display: grid;
+    gap: 24px;
+    min-width: 0;
+}
+
+.recado-tecnico {
+    padding: 28px;
+    border-radius: 12px;
+    background: #071820;
+    color: #f4f7f7;
+}
+
+.recado-tecnico .texto-destaque {
+    color: #98e7de;
+}
+
+.recado-tecnico p {
+    margin-top: 16px;
+    color: #b7c6cb;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.recado-tecnico p strong {
+    color: #f4f7f7;
+    font-weight: 600;
+}
+
+.recado-rodape {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #30444c;
+    color: #b7c6cb;
+    font-size: 12px;
+}
+
+.duvidas-ordem {
+    padding: 28px;
+}
+
+.duvidas-ordem h2 {
+    margin-bottom: 18px;
+}
+
+.duvidas-ordem details {
+    border-top: 1px solid var(--cor-borda);
+}
+
+.duvidas-ordem summary {
+    padding: 16px 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 220ms ease;
+}
+
+.duvidas-ordem summary:hover {
+    color: var(--cor-primaria-escura);
+}
+
+.duvidas-ordem summary:focus-visible {
+    outline: 3px solid var(--cor-primaria-escura);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+.duvidas-ordem details p {
+    padding-bottom: 18px;
+    color: var(--cor-texto-secundario);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.chamada-acompanhar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 40px;
+    padding: 28px 0;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.chamada-acompanhar h2 {
+    font-family: "Manrope", sans-serif;
+    font-size: 24px;
+    letter-spacing: -.7px;
+    margin-bottom: 8px;
+}
+
+.chamada-acompanhar p {
+    font-size: 15px;
+    color: var(--cor-texto-secundario);
+}
+
+.botao-acompanhar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-shrink: 0;
+    min-height: 46px;
+    padding: 12px 20px;
+    background: var(--cor-primaria);
+    color: #002d29;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background-color 240ms ease, box-shadow 240ms ease;
+}
+
+.botao-acompanhar:hover {
+    background: #0cb19d;
+    box-shadow: 0 5px 14px rgba(0, 80, 70, .12);
+}
+
 @media (max-width: 1000px) {
-    .acompanhar-topo { align-items: flex-start; flex-direction: column; gap: 20px; }
-    .detalhes-acompanhamento { grid-template-columns: 1fr 1fr; }
-    .ordem-servico, .historico-ordem { padding: 24px; }
+    .acompanhar-topo {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .detalhes-acompanhamento {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ordem-servico,
+    .historico-ordem {
+        padding: 24px;
+    }
 }
+
 @media (max-width: 700px) {
-    nav a[aria-current="page"]::after { display: none; }
-    .pagina-acompanhar { margin: 40px auto 48px; }
-    .acompanhar-topo h1 { letter-spacing: -1.5px; }
-    .acompanhar-topo p { font-size: 16px; }
-    .ordem-cabecalho { align-items: flex-start; flex-direction: column; gap: 16px; }
-    .resumo-ordem { grid-template-columns: 1fr; gap: 16px; }
-    .etapas-reparo { grid-template-columns: 1fr; gap: 0; }
-    .etapas-reparo li { display: grid; grid-template-columns: 40px 1fr; gap: 0 14px; text-align: left; padding: 0 0 20px; }
-    .marcador-etapa { grid-row: span 2; margin: 0; }
-    .etapas-reparo li:not(:last-child)::after { top: 44px; left: 19px; width: 2px; height: 12px; }
-    .etapas-reparo li:last-child { padding-bottom: 0; }
-    .situacao-reparo { padding: 18px; gap: 12px; }
-    .detalhes-acompanhamento { grid-template-columns: 1fr; }
-    .chamada-acompanhar { align-items: flex-start; flex-direction: column; gap: 20px; }
+    nav a[aria-current="page"]::after {
+        display: none;
+    }
+
+    .pagina-acompanhar {
+        margin: 40px auto 48px;
+    }
+
+    .acompanhar-topo h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .acompanhar-topo p {
+        font-size: 16px;
+    }
+
+    .ordem-cabecalho {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .resumo-ordem {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .etapas-reparo {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .etapas-reparo li {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 0 14px;
+        text-align: left;
+        padding: 0 0 20px;
+    }
+
+    .marcador-etapa {
+        grid-row: span 2;
+        margin: 0;
+    }
+
+    .etapas-reparo li:not(:last-child)::after {
+        top: 44px;
+        left: 19px;
+        width: 2px;
+        height: 12px;
+    }
+
+    .etapas-reparo li:last-child {
+        padding-bottom: 0;
+    }
+
+    .situacao-reparo {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .detalhes-acompanhamento {
+        grid-template-columns: 1fr;
+    }
+
+    .chamada-acompanhar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
+
 @media (max-width: 400px) {
-    .ordem-servico, .historico-ordem, .duvidas-ordem, .recado-tecnico { padding: 20px; }
-    .situacao-reparo { flex-direction: column; }
+
+    .ordem-servico,
+    .historico-ordem,
+    .duvidas-ordem,
+    .recado-tecnico {
+        padding: 20px;
+    }
+
+    .situacao-reparo {
+        flex-direction: column;
+    }
 }
