@@ -1,7 +1,3 @@
-/* =====================================================
-   IDEIATECH — ESCOLHA DO TIPO DE CADASTRO
-   Mantém as cores, fontes, bordas e interações do login
-===================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
@@ -11,7 +7,7 @@
     --azul-claro: #73B1B8;
     --verde: #95C4BD;
     --verde-claro: #A9D2C1;
-    --fundo: var(--fundo-pagina);
+    --fundo: #F5FAF9;
     --branco: #FFFFFF;
     --texto: #061922;
     --texto-secundario: #647277;
@@ -37,7 +33,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.5;
     color: var(--texto);
-    background: var(--fundo-pagina);
+    background: #F2F2F0;
 }
 
 a {
@@ -56,10 +52,6 @@ a {
 
 /* Logo no topo */
 .cadastro-tipo .logo {
-    height: auto;
-    display: block;
-    border-bottom: 0;
-    background: transparent;
     position: absolute;
     top: 40px;
     left: 7%;
@@ -120,7 +112,7 @@ a {
     gap: 18px;
     border: 1px solid rgba(220, 234, 232, 0.95);
     border-radius: var(--raio-card);
-    background: rgba(255, 255, 255, 0.92);
+    background:#98e7de2d;
     box-shadow: 0 8px 28px rgba(22, 64, 76, 0.045);
     text-align: center;
     text-decoration: none;
@@ -129,8 +121,8 @@ a {
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: var(--azul-claro);
-    background: var(--branco);
+    border-color: #00a395;
+    background:#F2F2F0 ;
     box-shadow: var(--sombra-card);
 }
 
@@ -146,8 +138,8 @@ a {
     display: grid;
     place-items: center;
     border-radius: 18px;
-    background: #EAF5F3;
-    color: var(--azul-escuro);
+    background:#F2F2F0 ;
+    color: #00a395;
     transition: background var(--transicao), color var(--transicao);
 }
 
@@ -159,8 +151,8 @@ a {
 }
 
 .card:hover .icone {
-    background: var(--azul-escuro);
-    color: var(--branco);
+    background:#00a395;
+    color: #F2F2F0;
 }
 
 .card-conteudo {
@@ -189,7 +181,7 @@ a {
     bottom: 20px;
     display: grid;
     place-items: center;
-    color: var(--azul-escuro);
+    color: black;
     transition: transform var(--transicao);
 }
 
@@ -212,7 +204,7 @@ a {
 
 .login-link a {
     margin-left: 4px;
-    color: var(--azul-escuro);
+    color: black;
     font-weight: 700;
     text-decoration: none;
 }
@@ -228,10 +220,6 @@ a {
     }
 
     .cadastro-tipo .logo {
-    height: auto;
-    display: block;
-    border-bottom: 0;
-    background: transparent;
         top: 28px;
         left: 6%;
         width: 160px;
@@ -257,11 +245,6 @@ a {
     }
 
     .cadastro-tipo .logo {
-    height: auto;
-    display: block;
-    border-bottom: 0;
-    background: transparent;
-        top: 22px;
         left: 22px;
         width: 140px;
     }
@@ -300,10 +283,27 @@ a {
     *::before,
     *::after {
         scroll-behavior: auto !important;
-        transition-property: color, background-color, border-color, box-shadow !important;
-        transition-duration: 180ms !important;
+        transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
-    .card:hover, .card:hover .seta { transform: none; }
+}
+
+/* Marca textual enquanto o arquivo de logotipo não está no repositório */
+.cadastro-tipo .logo .auth-brand {
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    width: max-content;
+    color: var(--azul-escuro);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+.cadastro-tipo .logo .auth-brand svg {
+    width: 29px;
+    height: 29px;
+    stroke-width: 1.8;
 }

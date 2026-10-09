@@ -34,38 +34,38 @@
                 <form class="auth-form" action="/register/empresa" method="POST" id="formCadastroEmpresa">
                     <div class="form-field">
                         <label for="nomeEmpresa">Nome da empresa</label>
-                        <input type="text" id="nomeEmpresa" name="nomeEmpresa" autocomplete="organization" placeholder="Nome comercial da empresa" minlength="2" maxlength="150" required>
+                        <input type="text" id="nomeEmpresa" name="nomeEmpresa" autocomplete="organization" minlength="2" maxlength="150" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label for="cnpjEmpresa">CNPJ <span aria-hidden="true">(opcional)</span></label>
-                            <input type="text" id="cnpjEmpresa" name="cnpj" inputmode="numeric" autocomplete="off" placeholder="00.000.000/0000-00" maxlength="18">
+                            <input type="text" id="cnpjEmpresa" name="cnpj" inputmode="numeric" autocomplete="off" maxlength="18">
                         </div>
                         <div class="form-field">
                             <label for="telefoneEmpresa">Telefone / WhatsApp</label>
-                            <input type="tel" id="telefoneEmpresa" name="telefone" autocomplete="tel" placeholder="(00) 00000-0000" maxlength="20" required>
+                            <input type="tel" id="telefoneEmpresa" name="telefone" autocomplete="tel" maxlength="20" required>
                         </div>
                     </div>
 
                     <div class="form-field">
                         <label for="responsavelEmpresa">Nome do responsável</label>
-                        <input type="text" id="responsavelEmpresa" name="nomeResponsavel" autocomplete="name" placeholder="Nome completo" minlength="3" maxlength="120" required>
+                        <input type="text" id="responsavelEmpresa" name="nomeResponsavel" autocomplete="name" minlength="3" maxlength="120" required>
                     </div>
 
                     <div class="form-field">
                         <label for="emailEmpresa">E-mail de acesso</label>
-                        <input type="email" id="emailEmpresa" name="email" autocomplete="email" placeholder="contato@empresa.com.br" maxlength="254" required>
+                        <input type="email" id="emailEmpresa" name="email" autocomplete="email" maxlength="254" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-field">
                             <label for="senhaEmpresa">Senha</label>
-                            <input type="password" id="senhaEmpresa" name="senha" autocomplete="new-password" placeholder="Mínimo de 8 caracteres" minlength="8" required>
+                            <input type="password" id="senhaEmpresa" name="senha" autocomplete="new-password" minlength="8" required>
                         </div>
                         <div class="form-field">
                             <label for="confirmarSenhaEmpresa">Confirmar senha</label>
-                            <input type="password" id="confirmarSenhaEmpresa" name="confirmarSenha" autocomplete="new-password" placeholder="Digite novamente" minlength="8" required>
+                            <input type="password" id="confirmarSenhaEmpresa" name="confirmarSenha" autocomplete="new-password" minlength="8" required>
                         </div>
                     </div>
 

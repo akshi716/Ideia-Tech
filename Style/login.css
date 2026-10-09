@@ -64,7 +64,7 @@ a {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    background: var(--fundo-pagina);
+    background: #98e7de2d;
 }
 
 .slogan > img:first-child {
@@ -103,8 +103,8 @@ a {
 
 .slogan > img:last-child {
     position: absolute;
-    right: -90px;
-    bottom: -90px;
+    right: 80px;
+    bottom: 50px;
     z-index: 0;
     width: min(440px, 65%);
     height: auto;
@@ -173,7 +173,7 @@ a {
     align-self: flex-end;
     margin-top: -8px;
     margin-bottom: 24px;
-    color: var(--azul-escuro);
+    color: var();
     font-size: 0.8125rem;
     font-weight: 600;
     cursor: pointer;
@@ -181,7 +181,7 @@ a {
 }
 
 .login-form form > span:hover {
-    color: var(--azul);
+color: #2c87b1;
 }
 
 .login-form button {
@@ -194,17 +194,19 @@ a {
     gap: 10px;
     border: 0;
     border-radius: var(--raio-campo);
-    background: var(--azul-escuro);
+    background: #11c5ad;
     color: var(--branco);
     font-size: 0.9375rem;
     font-weight: 700;
     cursor: pointer;
+    color:  #002d29;
     transition: transform var(--transicao), background var(--transicao), box-shadow var(--transicao);
 }
 
 .login-form button:hover {
     transform: translateY(-1px);
-    background: #326b8b;
+    background: #0cb19d;
+;
     box-shadow: 0 8px 20px rgba(59, 123, 159, 0.18);
 }
 
@@ -256,7 +258,7 @@ a {
 
 .social-login a:hover {
     transform: translateY(-1px);
-    border-color: var(--azul-claro);
+    border-color:#2c87b1;
     background: #F7FBFA;
 }
 
@@ -274,13 +276,14 @@ a {
 }
 
 .login-form > p:last-child a {
-    color: var(--azul-escuro);
+    color: black;
     font-weight: 700;
     text-decoration: none;
 }
 
 .login-form > p:last-child a:hover {
     text-decoration: underline;
+    color: #2c87b1;
 }
 
 /* Rodapé compacto abaixo das duas colunas */
