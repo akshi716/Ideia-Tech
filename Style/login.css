@@ -67,7 +67,7 @@ a {
     background: linear-gradient(145deg, #e3edeb 0%, #dce8e5 55%, #d4e3df 100%);
 }
 
-.slogan > img:first-child {
+.slogan>img:first-child {
     position: absolute;
     top: 40px;
     left: 7%;
@@ -101,7 +101,7 @@ a {
     color: var(--texto-secundario);
 }
 
-.slogan > img:last-child {
+.slogan>img:last-child {
     position: absolute;
     right: -90px;
     bottom: -90px;
@@ -134,7 +134,7 @@ a {
 
 .login-form form,
 .social-login,
-.login-form > p:last-child {
+.login-form>p:last-child {
     width: 100%;
     max-width: 440px;
 }
@@ -169,7 +169,7 @@ a {
     box-shadow: 0 0 0 4px rgba(115, 177, 184, 0.16);
 }
 
-.login-form form > span {
+.login-form form>span {
     align-self: flex-end;
     margin-top: -8px;
     margin-bottom: 24px;
@@ -180,7 +180,7 @@ a {
     transition: color var(--transicao);
 }
 
-.login-form form > span:hover {
+.login-form form>span:hover {
     color: var(--azul);
 }
 
@@ -224,14 +224,14 @@ a {
     flex-direction: column;
 }
 
-.social-login > p {
+.social-login>p {
     margin-bottom: 16px;
     text-align: center;
     color: var(--texto-secundario);
     font-size: 0.8125rem;
 }
 
-.social-login > div {
+.social-login>div {
     width: 100%;
     margin-bottom: 11px;
 }
@@ -266,25 +266,25 @@ a {
     object-fit: contain;
 }
 
-.login-form > p:last-child {
+.login-form>p:last-child {
     margin-top: 20px;
     text-align: center;
     color: var(--texto-secundario);
     font-size: 0.8125rem;
 }
 
-.login-form > p:last-child a {
+.login-form>p:last-child a {
     color: var(--azul-escuro);
     font-weight: 700;
     text-decoration: none;
 }
 
-.login-form > p:last-child a:hover {
+.login-form>p:last-child a:hover {
     text-decoration: underline;
 }
 
 /* Rodapé compacto abaixo das duas colunas */
-body > footer {
+body>footer {
     grid-column: 1 / -1;
     min-height: 44px;
     padding: 12px 20px;
@@ -308,7 +308,7 @@ body > footer {
         padding: 130px 8% 65px;
     }
 
-    .slogan > img:first-child {
+    .slogan>img:first-child {
         top: 30px;
         left: 8%;
         width: 165px;
@@ -323,7 +323,7 @@ body > footer {
         font-size: 1rem;
     }
 
-    .slogan > img:last-child {
+    .slogan>img:last-child {
         width: 300px;
         right: -70px;
         bottom: -85px;
@@ -343,7 +343,7 @@ body > footer {
         padding: 112px 25px 48px;
     }
 
-    .slogan > img:first-child {
+    .slogan>img:first-child {
         top: 24px;
         left: 25px;
         width: 140px;
@@ -361,7 +361,7 @@ body > footer {
         line-height: 1.6;
     }
 
-    .slogan > img:last-child {
+    .slogan>img:last-child {
         width: 220px;
         right: -65px;
         bottom: -70px;
@@ -378,11 +378,26 @@ body > footer {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         transition-property: color, background-color, border-color, box-shadow !important;
         transition-duration: 180ms !important;
     }
-    .login-form button:hover, .social-login a:hover { transform: none; }
+
+    .login-form button:hover,
+    .social-login a:hover {
+        transform: none;
+    }
 }
 
-.aviso-retorno { max-width: 440px; margin-bottom: 20px; padding: 14px; background: var(--fundo); border-radius: 8px; color: var(--texto-secundario); font-size: 14px; }
+.aviso-retorno {
+    max-width: 440px;
+    margin-bottom: 20px;
+    padding: 14px;
+    background: var(--fundo);
+    border-radius: 8px;
+    color: var(--texto-secundario);
+    font-size: 14px;
+}

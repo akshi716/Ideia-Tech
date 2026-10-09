@@ -228,10 +228,10 @@ a {
     }
 
     .cadastro-tipo .logo {
-    height: auto;
-    display: block;
-    border-bottom: 0;
-    background: transparent;
+        height: auto;
+        display: block;
+        border-bottom: 0;
+        background: transparent;
         top: 28px;
         left: 6%;
         width: 160px;
@@ -257,10 +257,10 @@ a {
     }
 
     .cadastro-tipo .logo {
-    height: auto;
-    display: block;
-    border-bottom: 0;
-    background: transparent;
+        height: auto;
+        display: block;
+        border-bottom: 0;
+        background: transparent;
         top: 22px;
         left: 22px;
         width: 140px;
@@ -296,6 +296,7 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -305,5 +306,9 @@ a {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
-    .card:hover, .card:hover .seta { transform: none; }
+
+    .card:hover,
+    .card:hover .seta {
+        transform: none;
+    }
 }
