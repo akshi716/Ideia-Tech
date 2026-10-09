@@ -11,7 +11,7 @@
     --azul-claro: #73B1B8;
     --verde: #95C4BD;
     --verde-claro: #A9D2C1;
-    --fundo: #F5FAF9;
+    --fundo: #E8EFEE;
     --branco: #FFFFFF;
     --texto: #061922;
     --texto-secundario: #647277;
@@ -37,7 +37,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.5;
     color: var(--texto);
-    background: linear-gradient(145deg, #eef8f6 0%, #f5faf9 55%, #e5f2f1 100%);
+    background: linear-gradient(145deg, #e3edeb 0%, #e8efee 55%, #dce8e5 100%);
 }
 
 a {
@@ -288,8 +288,10 @@ a {
     *::before,
     *::after {
         scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+        transition-property: color, background-color, border-color, box-shadow !important;
+        transition-duration: 180ms !important;
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+    .card:hover, .card:hover .seta { transform: none; }
 }

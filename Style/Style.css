@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root {
-    --cor-fundo: #f4f7f7;
-    --cor-fundo-secundario: #edf4f3;
+    --cor-fundo: #e8efee;
+    --cor-fundo-secundario: #dde7e5;
 
     --cor-primaria: #11c5ad;
     --cor-primaria-escura: #008b7c;
@@ -56,7 +56,7 @@ header {
     border-bottom: 1px solid var(--cor-borda);
     display: flex;
     align-items: center;
-    background: rgba(244, 247, 247, 0.95);
+    background: rgba(232, 239, 238, 0.95);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -698,4 +698,34 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--cor-primaria-es
     .proximo-passo { padding-bottom: 48px; }
     .processo { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } .card-acao:hover, .card-produto:hover, .botao-carrinho:hover { transform: none; } }
+/* Mantém feedback suave de cor sem deslocamentos no modo de movimento reduzido. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+        transition-property: color, background-color, border-color, box-shadow, opacity !important;
+        transition-duration: 180ms !important;
+        transition-timing-function: ease !important;
+    }
+    .hero-botoes a:hover,
+    .card-acao:hover,
+    .card-produto:hover,
+    .card-produto:hover::before,
+    .card-produto:hover .produto-foto img,
+    .card-produto:hover .produto-info h3,
+    .card-produto:hover .botao-carrinho,
+    .botao-carrinho:hover,
+    .chamada-orcamento button a:hover,
+    .botao-principal:hover,
+    .botao-secundario:hover,
+    .card-servico:hover,
+    .card-servico:hover::before,
+    .card-servico:hover > a svg,
+    .lista-diferenciais > div:hover,
+    .chamada-servico > a:hover,
+    .botao-analisar:hover,
+    .botao-continuar:hover,
+    .etapas-orcamento article:hover {
+        transform: none !important;
+    }
+    .card-produto:hover .produto-foto img { filter: none; }
+}

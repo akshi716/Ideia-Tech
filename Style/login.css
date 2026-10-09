@@ -11,7 +11,7 @@
     --azul-claro: #73B1B8;
     --verde: #95C4BD;
     --verde-claro: #A9D2C1;
-    --fundo: #F5FAF9;
+    --fundo: #E8EFEE;
     --branco: #FFFFFF;
     --texto: #061922;
     --texto-secundario: #647277;
@@ -62,7 +62,7 @@ a {
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    background: linear-gradient(145deg, #eef8f6 0%, #e5f2f1 55%, #dcefed 100%);
+    background: linear-gradient(145deg, #e3edeb 0%, #dce8e5 55%, #d4e3df 100%);
 }
 
 .slogan > img:first-child {
@@ -364,4 +364,12 @@ a {
         margin-bottom: 24px;
         font-size: 2rem;
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition-property: color, background-color, border-color, box-shadow !important;
+        transition-duration: 180ms !important;
+    }
+    .login-form button:hover, .social-login a:hover { transform: none; }
 }

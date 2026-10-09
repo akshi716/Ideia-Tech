@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompanhar | Ideia Tech</title>
+    <link rel="stylesheet" href="../Style/Style.css">
+    <link rel="stylesheet" href="../Style/Acompanhar.css">
+    <script src="https://unpkg.com/lucide@latest" async onload="window.lucide?.createIcons()"></script>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="vitrine.html">Vitrine</a></li>
+                <li><a href="Servicos.html">Serviços</a></li>
+                <li><a href="Orçamento.html">Orçamento</a></li>
+                <li><a href="Acompanhar.html" aria-current="page">Acompanhar</a></li>
+            </ul>
+            <a href="Perfil.html"><i data-lucide="user" aria-hidden="true"></i>Perfil</a>
+        </nav>
+    </header>
+
+    <main class="pagina-acompanhar">
+        <section class="acompanhar-topo" aria-labelledby="titulo-acompanhar">
+            <div>
+                <span class="texto-destaque">JÁ DEIXOU COM A GENTE?</span>
+                <h1 id="titulo-acompanhar">Como está <span>seu aparelho?</span></h1>
+                <p>Veja em qual etapa está o conserto, confira a previsão e leia as últimas informações da assistência.
+                </p>
+            </div>
+            <a class="link-atendimento" href="login.html">Entrar na minha conta <i data-lucide="arrow-up-right"
+                    aria-hidden="true"></i></a>
+        </section>
+
+        <aside class="aviso-exemplo" aria-label="Acompanhamento demonstrativo">
+            <i data-lucide="info" aria-hidden="true"></i>
+            <p><strong>Acompanhamento de exemplo.</strong> Os dados abaixo são ilustrativos e não representam uma ordem
+                de serviço real.</p>
+        </aside>
+
+        <section class="ordem-servico" aria-labelledby="titulo-ordem">
+            <div class="ordem-cabecalho">
+                <div>
+                    <span class="texto-destaque">ORDEM DE SERVIÇO · OS-2026-0148</span>
+                    <h2 id="titulo-ordem">iPhone 13 <span>Troca de tela</span></h2>
+                </div>
+                <span class="status-atual"><i data-lucide="wrench" aria-hidden="true"></i>Em reparo</span>
+            </div>
+            <dl class="resumo-ordem">
+                <div>
+                    <dt>Entrada na assistência</dt>
+                    <dd><time datetime="2026-10-06">06 out. 2026</time></dd>
+                </div>
+                <div>
+                    <dt>Previsão de conclusão</dt>
+                    <dd><time datetime="2026-10-09">09 out. 2026</time></dd>
+                </div>
+                <div>
+                    <dt>Última atualização</dt>
+                    <dd><time datetime="2026-10-08T10:30:00-03:00">08 out., às 10h30</time></dd>
+                </div>
+            </dl>
+            <div class="etapas-cabecalho">
+                <h3>Etapas do conserto</h3><span>Etapa 4 de 6</span>
+            </div>
+            <ol class="etapas-reparo" aria-label="Progresso do conserto">
+                <li class="etapa-concluida"><span class="marcador-etapa"
+                        aria-hidden="true">✓</span><strong>Recebido</strong><span>Concluído</span></li>
+                <li class="etapa-concluida"><span class="marcador-etapa"
+                        aria-hidden="true">✓</span><strong>Diagnóstico</strong><span>Concluído</span></li>
+                <li class="etapa-concluida"><span class="marcador-etapa"
+                        aria-hidden="true">✓</span><strong>Orçamento</strong><span>Aprovado</span></li>
+                <li class="etapa-atual" aria-current="step"><span class="marcador-etapa"
+                        aria-hidden="true">04</span><strong>Em reparo</strong><span>Etapa atual</span></li>
+                <li><span class="marcador-etapa" aria-hidden="true">05</span><strong>Testes</strong><span>A
+                        seguir</span></li>
+                <li><span class="marcador-etapa" aria-hidden="true">06</span><strong>Pronto</strong><span>A
+                        seguir</span></li>
+            </ol>
+            <div class="situacao-reparo">
+                <span class="icone-situacao"><i data-lucide="wrench" aria-hidden="true"></i></span>
+                <div>
+                    <h3>A troca da tela está em andamento.</h3>
+                    <p>Depois da instalação, vamos testar a imagem, o toque e as demais funções do aparelho antes de
+                        liberar a retirada.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="detalhes-acompanhamento">
+            <section class="historico-ordem" aria-labelledby="titulo-historico">
+                <div class="cabecalho-painel"><span class="texto-destaque">PASSO A PASSO</span>
+                    <h2 id="titulo-historico">Últimas atualizações</h2>
+                </div>
+                <ol class="lista-historico">
+                    <li><span class="ponto-historico" aria-hidden="true"></span>
+                        <div><time datetime="2026-10-08T10:30:00-03:00">08 out. · 10h30</time>
+                            <h3>Reparo iniciado</h3>
+                            <p>O aparelho está na bancada para a substituição da tela.</p>
+                        </div>
+                    </li>
+                    <li><span class="ponto-historico" aria-hidden="true"></span>
+                        <div><time datetime="2026-10-07T15:20:00-03:00">07 out. · 15h20</time>
+                            <h3>Orçamento aprovado</h3>
+                            <p>A troca da tela foi autorizada. A próxima etapa é o reparo.</p>
+                        </div>
+                    </li>
+                    <li><span class="ponto-historico" aria-hidden="true"></span>
+                        <div><time datetime="2026-10-07T09:45:00-03:00">07 out. · 9h45</time>
+                            <h3>Diagnóstico concluído</h3>
+                            <p>Identificamos danos no conjunto da tela e enviamos o orçamento.</p>
+                        </div>
+                    </li>
+                    <li><span class="ponto-historico" aria-hidden="true"></span>
+                        <div><time datetime="2026-10-06T14:10:00-03:00">06 out. · 14h10</time>
+                            <h3>Aparelho recebido</h3>
+                            <p>Registramos a entrada e encaminhamos o celular para avaliação.</p>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+
+            <aside class="informacoes-ordem" aria-label="Informações sobre o atendimento">
+                <section class="recado-tecnico" aria-labelledby="titulo-recado">
+                    <span class="texto-destaque">RECADO DA ASSISTÊNCIA</span>
+                    <h2 id="titulo-recado">Antes de buscar seu celular</h2>
+                    <p>Aguarde o status mudar para <strong>Pronto para retirada</strong>. A previsão pode mudar se os
+                        testes indicarem algum ajuste necessário.</p>
+                    <div class="recado-rodape"><i data-lucide="message-square" aria-hidden="true"></i><span>Equipe Ideia
+                            Tech · exemplo</span></div>
+                </section>
+                <section class="duvidas-ordem" aria-labelledby="titulo-duvidas">
+                    <h2 id="titulo-duvidas">Dúvidas sobre o status?</h2>
+                    <details>
+                        <summary>O que significa “Em reparo”?</summary>
+                        <p>O orçamento foi aprovado e o técnico está realizando o serviço. Depois, o aparelho passa
+                            pelos testes.</p>
+                    </details>
+                    <details>
+                        <summary>A previsão é uma data garantida?</summary>
+                        <p>É uma estimativa de conclusão. A disponibilidade das peças e o resultado dos testes podem
+                            alterar o prazo.</p>
+                    </details>
+                    <details>
+                        <summary>Onde encontro o código da OS?</summary>
+                        <p>No comprovante de entrada do aparelho. OS significa ordem de serviço: é o registro do seu
+                            atendimento.</p>
+                    </details>
+                </section>
+            </aside>
+        </div>
+
+        <section class="chamada-acompanhar" aria-labelledby="titulo-novo-servico">
+            <div>
+                <h2 id="titulo-novo-servico">Precisa de outro conserto?</h2>
+                <p>Conte o que aconteceu com seu aparelho para começar um novo atendimento.</p>
+            </div>
+            <a class="botao-acompanhar" href="Orçamento.html">Fazer orçamento <i data-lucide="arrow-up-right"
+                    aria-hidden="true"></i></a>
+        </section>
+    </main>
+    <footer>
+        <p>Ideia Tech · Projeto desenvolvido no Senac DF · 2026</p>
+    </footer>
+</body>
+
+</html> 
