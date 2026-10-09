@@ -11,7 +11,7 @@
     --azul-claro: #73B1B8;
     --verde: #95C4BD;
     --verde-claro: #A9D2C1;
-    --fundo: #E8EFEE;
+    --fundo: var(--fundo-pagina);
     --branco: #FFFFFF;
     --texto: #061922;
     --texto-secundario: #647277;
@@ -37,7 +37,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.5;
     color: var(--texto);
-    background: linear-gradient(145deg, #e3edeb 0%, #e8efee 55%, #dce8e5 100%);
+    background: var(--fundo-pagina);
 }
 
 a {
@@ -56,6 +56,10 @@ a {
 
 /* Logo no topo */
 .cadastro-tipo .logo {
+    height: auto;
+    display: block;
+    border-bottom: 0;
+    background: transparent;
     position: absolute;
     top: 40px;
     left: 7%;
@@ -224,6 +228,10 @@ a {
     }
 
     .cadastro-tipo .logo {
+    height: auto;
+    display: block;
+    border-bottom: 0;
+    background: transparent;
         top: 28px;
         left: 6%;
         width: 160px;
@@ -249,6 +257,10 @@ a {
     }
 
     .cadastro-tipo .logo {
+    height: auto;
+    display: block;
+    border-bottom: 0;
+    background: transparent;
         top: 22px;
         left: 22px;
         width: 140px;

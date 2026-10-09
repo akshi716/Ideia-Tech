@@ -10,7 +10,7 @@
     --azul-claro: #73B1B8;
     --verde: #95C4BD;
     --verde-claro: #A9D2C1;
-    --fundo: #F5FAF9;
+    --fundo: var(--fundo-pagina);
     --branco: #FFFFFF;
     --texto: #061922;
     --texto-secundario: #647277;
@@ -28,7 +28,7 @@ body {
     font-family: 'Inter', Arial, sans-serif;
     line-height: 1.5;
     color: var(--texto);
-    background: linear-gradient(145deg, #eef8f6 0%, #f5faf9 55%, #e5f2f1 100%);
+    background: var(--fundo-pagina);
 }
 button, input { font: inherit; }
 a { color: inherit; }
@@ -47,7 +47,7 @@ a { color: inherit; }
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-    background: linear-gradient(145deg, #eef8f6 0%, #e5f2f1 55%, #dcefed 100%);
+    background: var(--fundo-pagina);
 }
 .auth-aside::after {
     position: absolute;
@@ -92,7 +92,7 @@ a { color: inherit; }
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--branco);
+    background: var(--fundo-pagina);
 }
 .auth-panel { width: 100%; max-width: 520px; margin: auto; }
 .auth-heading { margin-bottom: 28px; }

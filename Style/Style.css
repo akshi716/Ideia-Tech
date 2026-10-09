@@ -2,8 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 :root {
-    --cor-fundo: #e8efee;
-    --cor-fundo-secundario: #dde7e5;
+    /* Branco padrão compartilhado por todas as páginas. */
+    --fundo-pagina: #F2F2F0;
+    --fundo-pagina-secundario: #E8E8E5;
+    --fundo: var(--fundo-pagina);
+    --cor-fundo: var(--fundo-pagina);
+    --cor-fundo-secundario: var(--fundo-pagina-secundario);
 
     --cor-primaria: #11c5ad;
     --cor-primaria-escura: #008b7c;
@@ -23,6 +27,10 @@
     box-sizing: border-box;
 }
 
+
+html {
+    background: var(--fundo-pagina);
+}
 
 body {
     background: var(--cor-fundo);
@@ -56,7 +64,7 @@ header {
     border-bottom: 1px solid var(--cor-borda);
     display: flex;
     align-items: center;
-    background: rgba(232, 239, 238, 0.95);
+    background: var(--fundo-pagina);
     position: sticky;
     top: 0;
     z-index: 100;
